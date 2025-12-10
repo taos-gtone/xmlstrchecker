@@ -158,10 +158,31 @@ public class XmlStrView extends ViewPart {
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
 	private void createTopAreaControls(Composite parent) {
-        // 1) 최근 파일 드롭다운 (콤보박스)
-        comboRecentFiles = new Combo(parent, SWT.DROP_DOWN | SWT.READ_ONLY);
-        comboRecentFiles.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false));
-        comboRecentFiles.setToolTipText("최근에 사용한 XML 파일 목록");
+		
+		// topArea는 createPartControl에서 만들어 준 Composite
+
+	    // 1) topArea는 위/아래 두 줄만 가진다 (라벨, row)
+		parent.setLayout(new GridLayout(1, false));
+
+	    // ── 라벨 (첫 줄)
+	    Label lblTitle = new Label(parent, SWT.NONE);
+	    lblTitle.setText("Dependency Rules: v5.6 (250416)");
+
+	    // ── 콤보 + 버튼들을 담을 row (둘째 줄)
+	    Composite row = new Composite(parent, SWT.NONE);
+	    row.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false));
+
+	    GridLayout rowLayout = new GridLayout(3, false); // ★ 한 줄에 3개
+	    rowLayout.marginWidth = 0;
+	    rowLayout.marginHeight = 0;
+	    rowLayout.horizontalSpacing = 8;
+	    row.setLayout(rowLayout);
+
+	    // ★★★ 여기부터가 핵심: parent 자리에 "row" 를 쓴다 ★★★
+
+	    // 콤보
+	    comboRecentFiles = new Combo(row, SWT.DROP_DOWN | SWT.READ_ONLY);
+	    comboRecentFiles.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false));
 
         // 예시로 몇 개 넣어두기 (나중에 필요 없으면 지워도 됨)
 //        comboRecentFiles.add("C:/temp/sample1.xml");
@@ -181,7 +202,7 @@ public class XmlStrView extends ViewPart {
 //        txtFilePath.setMessage("XML 파일 경로를 입력하세요");
 
         // 3) Browse 버튼 (파일 선택)
-        Button btnBrowse = new Button(parent, SWT.PUSH);
+        Button btnBrowse = new Button(row, SWT.PUSH);
         btnBrowse.setText("Browse...");
         btnBrowse.setToolTipText("파일 탐색기에서 XML 파일을 선택합니다.");
         btnBrowse.addListener(SWT.Selection, e -> {
@@ -198,11 +219,13 @@ public class XmlStrView extends ViewPart {
                 
                 // 👇 파일 선택 시 status 초기화
                 lblStatus.setText("");
+                
+                clearErrors();
             }
         });
 
         // 4) Check 버튼 (검사 시작)
-        Button btnCheck = new Button(parent, SWT.PUSH);
+        Button btnCheck = new Button(row, SWT.PUSH);
         btnCheck.setText("Check");
         btnCheck.setToolTipText("XML 형식 및 의존성을 검사합니다.");
         btnCheck.addListener(SWT.Selection, e -> {
