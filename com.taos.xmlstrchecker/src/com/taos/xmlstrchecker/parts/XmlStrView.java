@@ -39,6 +39,13 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.IOException;
 import org.xml.sax.SAXException;
 
+import com.taos.xmlstrchecker.core.CheckResult;
+import com.taos.xmlstrchecker.core.DependencyChecker;
+import com.taos.xmlstrchecker.core.XmlCheckerService;
+import com.taos.xmlstrchecker.core.XmlParser;
+import com.taos.xmlstrchecker.ui.ErrorTablePresenter;
+import com.taos.xmlstrchecker.ui.StatusPresenter;
+
 
 public class XmlStrView extends ViewPart {
 	private Label myLabelInView;
@@ -49,16 +56,18 @@ public class XmlStrView extends ViewPart {
 //    private Text txtFilePath;
     private Table errorTable;
     private Label lblStatus;
+    
+    // Presenters
+    private StatusPresenter statusPresenter;
+    private ErrorTablePresenter errorPresenter;
+
+    // Core service
+    private XmlCheckerService checker;
+    
+    private org.eclipse.swt.graphics.Font boldStatusFont;
 
 	@PostConstruct
 	public void createPartControl(Composite parent) {
-		/*
-		System.out.println("Enter in SampleE4View postConstruct");
-
-		myLabelInView = new Label(parent, SWT.BORDER);
-		myLabelInView.setText("Welcome to XML Checker for STR Report document!");
-		*/
-		
 		// 1열짜리 GridLayout: 위/중간/아래 세로로 쌓기
         parent.setLayout(new GridLayout(1, false));
 
@@ -67,101 +76,45 @@ public class XmlStrView extends ViewPart {
         topArea.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
         topArea.setLayout(new GridLayout(4, false)); // 드롭다운, 텍스트, Browse, Check
 
-//        // 가운데 영역 (설명/추가 정보)
-//        Composite middleArea = new Composite(parent, SWT.NONE);
-//        middleArea.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
-//        middleArea.setLayout(new GridLayout(1, false));
-
         // 아래 영역 (에러 테이블 + 상태바)
         Composite bottomArea = new Composite(parent, SWT.NONE);
         bottomArea.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
         bottomArea.setLayout(new GridLayout(1, false));
 
         createTopAreaControls(topArea);
-//        createMiddleAreaControls(middleArea);
         createBottomAreaControls(bottomArea);
+        
+        // presenters/service wiring (UI 생성 후)
+        statusPresenter = new StatusPresenter(lblStatus);
+        errorPresenter = new ErrorTablePresenter(errorTable);
+
+        checker = new XmlCheckerService(new XmlParser(), new DependencyChecker());
+
+        // initial status
+        statusPresenter.show(CheckResult.StatusKind.READY, "Ready.");
 	}
 
 	@Override
     public void setFocus() {
-		comboRecentFiles.setFocus();
-		
-//        if (txtFilePath != null && !txtFilePath.isDisposed()) {
-//            txtFilePath.setFocus();
-//        }
+        if (comboRecentFiles != null && !comboRecentFiles.isDisposed()) {
+            comboRecentFiles.setFocus();
+        }
+    }
+	
+	@Override
+    public void dispose() {
+        if (statusPresenter != null) {
+            statusPresenter.dispose();
+        }
+        super.dispose();
     }
 
-	/**
-	 * This method is kept for E3 compatiblity. You can remove it if you do not
-	 * mix E3 and E4 code. <br/>
-	 * With E4 code you will set directly the selection in ESelectionService and
-	 * you do not receive a ISelection
-	 * 
-	 * @param s
-	 *            the selection received from JFace (E3 mode)
-	 */
-	@Inject
-	@Optional
-	public void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) ISelection s) {
-		if (s==null || s.isEmpty())
-			return;
-
-		if (s instanceof IStructuredSelection) {
-			IStructuredSelection iss = (IStructuredSelection) s;
-			if (iss.size() == 1)
-				setSelection(iss.getFirstElement());
-			else
-				setSelection(iss.toArray());
-		}
-	}
-
-	/**
-	 * This method manages the selection of your current object. In this example
-	 * we listen to a single Object (even the ISelection already captured in E3
-	 * mode). <br/>
-	 * You should change the parameter type of your received Object to manage
-	 * your specific selection
-	 * 
-	 * @param o
-	 *            : the current object received
-	 */
-	@Inject
-	@Optional
-	public void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) Object o) {
-
-		// Remove the 2 following lines in pure E4 mode, keep them in mixed mode
-		if (o instanceof ISelection) // Already captured
-			return;
-
-		// Test if label exists (inject methods are called before PostConstruct)
-		if (myLabelInView != null)
-			myLabelInView.setText("Current single selection class is : " + o.getClass());
-	}
-
-	/**
-	 * This method manages the multiple selection of your current objects. <br/>
-	 * You should change the parameter type of your array of Objects to manage
-	 * your specific selection
-	 * 
-	 * @param o
-	 *            : the current array of objects received in case of multiple selection
-	 */
-	@Inject
-	@Optional
-	public void setSelection(@Named(IServiceConstants.ACTIVE_SELECTION) Object[] selectedObjects) {
-
-		// Test if label exists (inject methods are called before PostConstruct)
-		if (myLabelInView != null)
-			myLabelInView.setText("This is a multiple selection of " + selectedObjects.length + " objects");
-	}
-	
-	///////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // ─────────────────────────────────────────────────────────────────────────────
+    // UI Builders
+    // ─────────────────────────────────────────────────────────────────────────────
 	
 	private void createTopAreaControls(Composite parent) {
-		
-		// topArea는 createPartControl에서 만들어 준 Composite
-
-	    // 1) topArea는 위/아래 두 줄만 가진다 (라벨, row)
+	    // topArea는 위/아래 두 줄만 가진다 (라벨, row)
 		parent.setLayout(new GridLayout(1, false));
 
 	    // ── 라벨 (첫 줄)
@@ -178,82 +131,23 @@ public class XmlStrView extends ViewPart {
 	    rowLayout.horizontalSpacing = 8;
 	    row.setLayout(rowLayout);
 
-	    // ★★★ 여기부터가 핵심: parent 자리에 "row" 를 쓴다 ★★★
-
-	    // 콤보
+	    // combo
 	    comboRecentFiles = new Combo(row, SWT.DROP_DOWN | SWT.READ_ONLY);
 	    comboRecentFiles.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false));
 
-        // 예시로 몇 개 넣어두기 (나중에 필요 없으면 지워도 됨)
-//        comboRecentFiles.add("C:/temp/sample1.xml");
-//        comboRecentFiles.add("C:/temp/sample2.xml");
-
-        comboRecentFiles.addListener(SWT.Selection, e -> {
-//            int idx = comboRecentFiles.getSelectionIndex();
-//            if (idx >= 0) {
-//                String path = comboRecentFiles.getItem(idx);
-//                txtFilePath.setText(path);
-//            }
-        });
-
-        // 2) 파일 경로 입력 텍스트
-//        txtFilePath = new Text(parent, SWT.BORDER);
-//        txtFilePath.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false));
-//        txtFilePath.setMessage("XML 파일 경로를 입력하세요");
-
-        // 3) Browse 버튼 (파일 선택)
+        // Browse 버튼 (파일 선택)
         Button btnBrowse = new Button(row, SWT.PUSH);
         btnBrowse.setText("Browse...");
-        btnBrowse.setToolTipText("파일 탐색기에서 XML 파일을 선택합니다.");
-        btnBrowse.addListener(SWT.Selection, e -> {
-            // ✅ 여기서 getSite() 쓰지 말고, 버튼에서 직접 Shell 얻기
-            org.eclipse.swt.widgets.Shell shell = btnBrowse.getShell();
+        btnBrowse.setToolTipText("Select an XML file from your file system.");
+        btnBrowse.addListener(SWT.Selection, e -> onBrowse(btnBrowse));
 
-            FileDialog dialog = new FileDialog(shell, SWT.OPEN);
-            dialog.setFilterExtensions(new String[] { "*.xml", "*.*" });
-
-            String selected = dialog.open();
-            if (selected != null) {
-//                txtFilePath.setText(selected);
-                addRecentFile(selected);
-                
-                // 👇 파일 선택 시 status 초기화
-                lblStatus.setText("");
-                
-                clearErrors();
-            }
-        });
-
-        // 4) Check 버튼 (검사 시작)
+        // Check 버튼 (검사 시작)
         Button btnCheck = new Button(row, SWT.PUSH);
         btnCheck.setText("Check");
-        btnCheck.setToolTipText("XML 형식 및 의존성을 검사합니다.");
-        btnCheck.addListener(SWT.Selection, e -> {
-            runCheck();
-        });
+        btnCheck.setToolTipText("Validate XML format and dependency rules.");
+        btnCheck.addListener(SWT.Selection, e -> runCheck());
     }
-
-    private void addRecentFile(String path) {
-    	// 이미 목록에 있으면 지우고 맨 위로 올리기
-        int existingIndex = comboRecentFiles.indexOf(path);
-        if (existingIndex >= 0) {
-            comboRecentFiles.remove(existingIndex);
-        }
-
-        // 맨 앞(0번)에 추가
-        comboRecentFiles.add(path, 0);
-
-        // 콤보에서 이 항목을 선택 상태로 만들기
-        comboRecentFiles.select(0);
-    }
-    
-//    private void createMiddleAreaControls(Composite parent) {
-//        Label lblInfo = new Label(parent, SWT.NONE);
-//        lblInfo.setText("※ 이 뷰는 XML 형식과 간단한 의존성을 검사합니다.\n"
-//                + "1) 위에서 파일을 선택하고\n"
-//                + "2) Check 버튼을 눌러보세요.");
-//    }
-    
+	
     private void createBottomAreaControls(Composite parent) {
         Label lblErrors = new Label(parent, SWT.NONE);
         lblErrors.setText("Error Messages:");
@@ -282,131 +176,62 @@ public class XmlStrView extends ViewPart {
         lblStatus.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false));
         lblStatus.setText("Ready.");
     }
+    
+    // ─────────────────────────────────────────────────────────────────────────────
+    // Event handlers
+    // ─────────────────────────────────────────────────────────────────────────────
 
-    private void clearErrors() {
-        if (errorTable != null && !errorTable.isDisposed()) {
-            errorTable.removeAll();
-        }
+    private void onBrowse(Button btnBrowse) {
+        FileDialog dialog = new FileDialog(btnBrowse.getShell(), SWT.OPEN);
+        dialog.setFilterExtensions(new String[] { "*.xml", "*.*" });
+
+        String selected = dialog.open();
+        if (selected == null) return;
+
+        addRecentFile(selected);
+
+        // reset UI state
+        if (errorPresenter != null) errorPresenter.clear();
+        if (statusPresenter != null) statusPresenter.show(CheckResult.StatusKind.READY, "");
     }
     
     private void runCheck() {
-        clearErrors();
+    	if (errorPresenter != null) errorPresenter.clear();
 
+        String path = getSelectedPath();
+
+        CheckResult result = checker.check(path);
+
+        // show errors
+        result.getErrors().forEach(errorPresenter::add);
+
+        // show status
+        statusPresenter.show(result.getStatusKind(), result.getStatusMessage());
+    }
+    
+	// ─────────────────────────────────────────────────────────────────────────────
+    // Helpers (view-only)
+    // ─────────────────────────────────────────────────────────────────────────────
+
+    private String getSelectedPath() {
+        if (comboRecentFiles == null || comboRecentFiles.isDisposed()) return null;
         int idx = comboRecentFiles.getSelectionIndex();
-        if (idx < 0) {
-            addError("ERROR", "파일이 선택되지 않았습니다.", "-");
-            lblStatus.setText("경고: 파일을 선택하세요.");
-            return;
-        }
-
+        if (idx < 0) return null;
         String path = comboRecentFiles.getItem(idx);
-
-        if (path.isEmpty()) {
-            addError("ERROR", "파일 경로가 비어 있습니다.", "-");
-            lblStatus.setText("경고: 파일 경로를 입력하세요.");
-            return;
-        }
-
-        File file = new File(path);
-        if (!file.exists()) {
-            addError("ERROR", "파일이 존재하지 않습니다.", path);
-            lblStatus.setText("에러: 파일이 없습니다.");
-            return;
-        }
-
-        try {
-            // XML을 파싱하면서 문법을 함께 검사
-            Document doc = parseXml(file);
-
-            // 3단계: 의존성/메타데이터 검사
-            checkDependencies(doc);
-
-            lblStatus.setText("성공: XML 형식 및 의존성 검사 통과.");
-        } catch (Exception e) {
-            addError("ERROR", e.getMessage(), path);
-            lblStatus.setText("에러: " + e.getMessage());
-        }
+        return (path != null && !path.trim().isEmpty()) ? path.trim() : null;
     }
 
-    private void addError(String type, String message, String location) {
-        if (errorTable == null || errorTable.isDisposed()) {
-            return;
-        }
-        TableItem item = new TableItem(errorTable, SWT.NONE);
-        item.setText(0, type != null ? type : "");
-        item.setText(1, message != null ? message : "");
-        item.setText(2, location != null ? location : "");
-    }
-    
-    private Document parseXml(File file) throws Exception {
-        try {
-            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-            factory.setNamespaceAware(true);
-
-            DocumentBuilder builder = factory.newDocumentBuilder();
-
-            // XML 문법 에러를 잡기 위한 ErrorHandler
-            builder.setErrorHandler(new org.xml.sax.helpers.DefaultHandler() {
-                @Override
-                public void error(org.xml.sax.SAXParseException e) throws SAXException {
-                    throw e;
-                }
-
-                @Override
-                public void fatalError(org.xml.sax.SAXParseException e) throws SAXException {
-                    throw e;
-                }
-
-                @Override
-                public void warning(org.xml.sax.SAXParseException e) throws SAXException {
-                    // 원하면 경고도 에러로 처리 가능
-                    // throw e;
-                }
-            });
-
-            return builder.parse(file);
-        } catch (SAXException e) {
-            throw new Exception("XML 문법 오류: " + e.getMessage(), e);
-        } catch (IOException e) {
-            throw new Exception("파일 읽기 오류: " + e.getMessage(), e);
-        }
-    }
-    
-    private void checkDependencies(Document doc) {
-        NodeList items = doc.getElementsByTagName("item");
-
-        // 1) 모든 item의 id 모으기
-        Set<String> ids = new HashSet<>();
-        for (int i = 0; i < items.getLength(); i++) {
-            Element el = (Element) items.item(i);
-            String id = el.getAttribute("id");
-            if (id == null || id.isEmpty()) {
-                addError("ERROR", "<item> 요소에 id 속성이 없습니다.", getElementLocation(el));
-            } else {
-                ids.add(id);
-            }
+    private void addRecentFile(String path) {
+    	// 이미 목록에 있으면 지우고 맨 위로 올리기
+        int existingIndex = comboRecentFiles.indexOf(path);
+        if (existingIndex >= 0) {
+            comboRecentFiles.remove(existingIndex);
         }
 
-        // 2) ref가 있으면 ids 안에 존재하는지 확인
-        for (int i = 0; i < items.getLength(); i++) {
-            Element el = (Element) items.item(i);
-            String ref = el.getAttribute("ref");
-            if (ref != null && !ref.isEmpty()) {
-                if (!ids.contains(ref)) {
-                    addError("ERROR",
-                            "ref=\"" + ref + "\"에 해당하는 id를 가진 <item>이 없습니다.",
-                            getElementLocation(el));
-                }
-            }
-        }
-    }
+        // 맨 앞(0번)에 추가
+        comboRecentFiles.add(path, 0);
 
-    private String getElementLocation(Element el) {
-        String tag = el.getTagName();
-        String id = el.getAttribute("id");
-        if (id != null && !id.isEmpty()) {
-            return "<" + tag + " id=\"" + id + "\">";
-        }
-        return "<" + tag + ">";
-    }
+        // 콤보에서 이 항목을 선택 상태로 만들기
+        comboRecentFiles.select(0);
+    }    
 }
