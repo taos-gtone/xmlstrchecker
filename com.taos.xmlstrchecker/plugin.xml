@@ -13,12 +13,12 @@
    <extension
          point="org.eclipse.ui.views">
 	   <category
-	         id="com.taos.category"
+	         id="com.taos.xmlstrchecker.category"
 	         name="STR Tools"/>
 	   <view
 	         id="com.taos.xmlstrchecker.view"
 	         name="XML Checker"
-	         class="com.taos.SampleView"
+	         class="com.taos.xmlstrchecker.view"
 	         category="com.taos.category"/>         
    </extension>
 
