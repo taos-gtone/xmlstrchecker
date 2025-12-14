@@ -1,0 +1,5150 @@
+{
+  "meta": {
+    "name": "STR Dependency Rules",
+    "version_label": "v5.6 (250416)",
+    "spec_version": "5.6",
+    "release_tag": "250416",
+    "generated_at": "2025-12-14T04:19:17",
+    "source_excel": "Body",
+    "sheets_used": [
+      "STR서식 Ver5.6",
+      "보고기관코드집"/
+    ]
+  },
+  "code_sets": {
+    "메시지타입코드": [
+      {
+        "id": "01",
+        "general": "보고",
+        "casino": "보고",
+        "remark": null
+      },
+      {
+        "id": "04",
+        "general": "재보고",
+        "casino": "재보고",
+        "remark": null
+      },
+      {
+        "id": "96",
+        "general": "모의보고-재보고",
+        "casino": "모의보고-재보고",
+        "remark": null
+      },
+      {
+        "id": "99",
+        "general": "모의보고-보고",
+        "casino": "모의보고-보고",
+        "remark": null
+      }
+    ],
+    "실명번호구분": [
+      {
+        "id": "01",
+        "general": "주민등록번호(개인)",
+        "casino": "주민등록번호(개인)",
+        "remark": null
+      },
+      {
+        "id": "02",
+        "general": "주민등록번호(기타단체)",
+        "casino": "주민등록번호(기타단체)",
+        "remark": null
+      },
+      {
+        "id": "03",
+        "general": "사업자등록번호",
+        "casino": "사업자등록번호",
+        "remark": null
+      },
+      {
+        "id": "04",
+        "general": "여권번호",
+        "casino": "여권번호",
+        "remark": null
+      },
+      {
+        "id": "05",
+        "general": "법인등록번호",
+        "casino": "법인등록번호",
+        "remark": null
+      },
+      {
+        "id": "06",
+        "general": "외국인등록번호",
+        "casino": "외국인등록번호",
+        "remark": null
+      },
+      {
+        "id": "07",
+        "general": "국내거소신고번호",
+        "casino": "국내거소신고번호",
+        "remark": null
+      },
+      {
+        "id": "08",
+        "general": "투자등록번호/LEI",
+        "casino": "투자등록번호/LEI",
+        "remark": null
+      },
+      {
+        "id": "09",
+        "general": "고유번호/납세번호",
+        "casino": "고유번호/납세번호",
+        "remark": null
+      },
+      {
+        "id": "11",
+        "general": "BIC코드(SWIFT)",
+        "casino": "BIC코드(SWIFT)",
+        "remark": null
+      },
+      {
+        "id": "12",
+        "general": "해당국가법인번호",
+        "casino": "해당국가법인번호",
+        "remark": null
+      },
+      {
+        "id": "14",
+        "general": "CI번호",
+        "casino": "CI번호",
+        "remark": null
+      },
+      {
+        "id": "99",
+        "general": "기타",
+        "casino": "기타",
+        "remark": null
+      }
+    ],
+    "직업구분": [
+      {
+        "id": "01",
+        "general": "직장인",
+        "casino": "직장인",
+        "remark": null
+      },
+      {
+        "id": "02",
+        "general": "개인사업자",
+        "casino": "개인사업자",
+        "remark": null
+      },
+      {
+        "id": "03",
+        "general": "무직",
+        "casino": "무직",
+        "remark": null
+      },
+      {
+        "id": "91",
+        "general": "파악할 수 없음",
+        "casino": "파악할 수 없음",
+        "remark": null
+      },
+      {
+        "id": "99",
+        "general": "기타",
+        "casino": "기타",
+        "remark": null
+      }
+    ],
+    "거래역할": [
+      {
+        "id": "01",
+        "general": "의심거래자",
+        "casino": "의심거래자",
+        "remark": null
+      },
+      {
+        "id": "02",
+        "general": "의심거래자 대표자",
+        "casino": "의심거래자 대표자",
+        "remark": null
+      },
+      {
+        "id": "03",
+        "general": "거래대리인",
+        "casino": "거래대리인",
+        "remark": null
+      },
+      {
+        "id": "08",
+        "general": "관련계좌 개설자",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "09",
+        "general": "관련계좌 개설 대리인",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "10",
+        "general": "관련계좌 개설 대표자",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "11",
+        "general": "당행송수취 계좌개설자",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "12",
+        "general": "당행송수취 계좌개설 대리인",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "13",
+        "general": "당행송수취 계좌개설 대표자",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "15",
+        "general": "주피보험자",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "16",
+        "general": "종피보험자",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "17",
+        "general": "수익자",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "18",
+        "general": "모집인(중개인)",
+        "casino": null,
+        "remark": null
+      }
+    ],
+    "거래자관계": [
+      {
+        "id": "51",
+        "general": "대표자",
+        "casino": "대표자",
+        "remark": null
+      },
+      {
+        "id": "52",
+        "general": "대리인",
+        "casino": "대리인",
+        "remark": null
+      },
+      {
+        "id": "99",
+        "general": "기타",
+        "casino": "기타",
+        "remark": null
+      }
+    ],
+    "거래채널": [
+      {
+        "id": "01",
+        "general": "창구",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "02",
+        "general": "자동화기기",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "03",
+        "general": "PB센터",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "04",
+        "general": "인터넷뱅킹",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "05",
+        "general": "전화/휴대전화",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "06",
+        "general": "콜센터",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "07",
+        "general": "대출모집인",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "08",
+        "general": "보험설계사",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "09",
+        "general": "보험대리점",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "10",
+        "general": "보험중개사",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "11",
+        "general": "방카슈랑스",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "13",
+        "general": "환전창구",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "14",
+        "general": "캐싱창구",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "15",
+        "general": "딜러",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "16",
+        "general": "HTS/MTS/WTS",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "17",
+        "general": "가맹점",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "18",
+        "general": "카드모집인",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "19",
+        "general": "모바일",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "20",
+        "general": "제휴점",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "70",
+        "general": null,
+        "casino": "출납창구",
+        "remark": null
+      },
+      {
+        "id": "71",
+        "general": null,
+        "casino": "게임테이블",
+        "remark": null
+      },
+      {
+        "id": "99",
+        "general": null,
+        "casino": "기타",
+        "remark": null
+      }
+    ],
+    "거래수단": [
+      {
+        "id": "01",
+        "general": "현금",
+        "casino": "현금",
+        "remark": null
+      },
+      {
+        "id": "02",
+        "general": "수표",
+        "casino": "수표",
+        "remark": null
+      },
+      {
+        "id": "03",
+        "general": "주식",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "04",
+        "general": "채권",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "05",
+        "general": "외환",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "06",
+        "general": "대체",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "07",
+        "general": "전자화폐",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "08",
+        "general": "기타유가증권",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "09",
+        "general": "신용카드",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "10",
+        "general": "체크카드",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "11",
+        "general": "선불카드",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "12",
+        "general": "기프트카드",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "13",
+        "general": "가상자산",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "99",
+        "general": "기타",
+        "casino": "기타",
+        "remark": null
+      }
+    ],
+    "거래종류": [
+      {
+        "id": "01",
+        "general": "입금",
+        "casino": null,
+        "remark": "입금(inner)"
+      },
+      {
+        "id": "02",
+        "general": "출금",
+        "casino": null,
+        "remark": "출금(outer)"
+      },
+      {
+        "id": "03",
+        "general": "환전",
+        "casino": null,
+        "remark": "etc"
+      },
+      {
+        "id": "04",
+        "general": "영수",
+        "casino": null,
+        "remark": "입금(inner)"
+      },
+      {
+        "id": "05",
+        "general": "송금",
+        "casino": null,
+        "remark": "출금(outer)"
+      },
+      {
+        "id": "06",
+        "general": "융자",
+        "casino": null,
+        "remark": "etc"
+      },
+      {
+        "id": "07",
+        "general": "상환",
+        "casino": null,
+        "remark": "etc"
+      },
+      {
+        "id": "08",
+        "general": "이체영수",
+        "casino": null,
+        "remark": "입금(inner)"
+      },
+      {
+        "id": "09",
+        "general": "이체송금",
+        "casino": null,
+        "remark": "출금(outer)"
+      },
+      {
+        "id": "10",
+        "general": "매수",
+        "casino": null,
+        "remark": "etc"
+      },
+      {
+        "id": "11",
+        "general": "매도",
+        "casino": null,
+        "remark": "etc"
+      },
+      {
+        "id": "12",
+        "general": "입고",
+        "casino": null,
+        "remark": "입금(inner)"
+      },
+      {
+        "id": "13",
+        "general": "출고",
+        "casino": null,
+        "remark": "출금(outer)"
+      },
+      {
+        "id": "14",
+        "general": "대체입고",
+        "casino": null,
+        "remark": "입금(inner)"
+      },
+      {
+        "id": "15",
+        "general": "대체출고",
+        "casino": null,
+        "remark": "출금(outer)"
+      },
+      {
+        "id": "16",
+        "general": "수표지급",
+        "casino": null,
+        "remark": "etc"
+      },
+      {
+        "id": "17",
+        "general": "수표발행",
+        "casino": null,
+        "remark": "etc"
+      },
+      {
+        "id": "18",
+        "general": "계약",
+        "casino": null,
+        "remark": "etc"
+      },
+      {
+        "id": "19",
+        "general": "해지",
+        "casino": null,
+        "remark": "etc"
+      },
+      {
+        "id": "20",
+        "general": "보험료납입",
+        "casino": null,
+        "remark": "입금(inner)"
+      },
+      {
+        "id": "21",
+        "general": "보험금지급",
+        "casino": null,
+        "remark": "출금(outer)"
+      },
+      {
+        "id": "22",
+        "general": "지급",
+        "casino": null,
+        "remark": "etc"
+      },
+      {
+        "id": "23",
+        "general": "발행",
+        "casino": null,
+        "remark": "etc"
+      },
+      {
+        "id": "24",
+        "general": "증권청약",
+        "casino": null,
+        "remark": "etc"
+      },
+      {
+        "id": "25",
+        "general": "신용판매(국내)",
+        "casino": null,
+        "remark": "출금(outer)"
+      },
+      {
+        "id": "26",
+        "general": "현금서비스(국내)",
+        "casino": null,
+        "remark": "출금(outer)"
+      },
+      {
+        "id": "27",
+        "general": "체크카드결제(국내)",
+        "casino": null,
+        "remark": "출금(outer)"
+      },
+      {
+        "id": "28",
+        "general": "신용판매(해외)",
+        "casino": null,
+        "remark": "출금(outer)"
+      },
+      {
+        "id": "29",
+        "general": "현금서비스(해외)",
+        "casino": null,
+        "remark": "출금(outer)"
+      },
+      {
+        "id": "30",
+        "general": "체크카드결제(해외)",
+        "casino": null,
+        "remark": "출금(outer)"
+      },
+      {
+        "id": "31",
+        "general": "가상자산 매수",
+        "casino": null,
+        "remark": "etc"
+      },
+      {
+        "id": "32",
+        "general": "가상자산 매도",
+        "casino": null,
+        "remark": "etc"
+      },
+      {
+        "id": "33",
+        "general": "가상자산 입고",
+        "casino": null,
+        "remark": "입금(inner)"
+      },
+      {
+        "id": "34",
+        "general": "가상자산 출고",
+        "casino": null,
+        "remark": "출금(outer)"
+      },
+      {
+        "id": "70",
+        "general": null,
+        "casino": "칩스구매",
+        "remark": "입금(inner)"
+      },
+      {
+        "id": "71",
+        "general": null,
+        "casino": "칩스환전",
+        "remark": "출금(outer)"
+      },
+      {
+        "id": "99",
+        "general": "기타",
+        "casino": "기타",
+        "remark": "etc"
+      }
+    ],
+    "거래상품\n\n게임상품\n(카지노)": [
+      {
+        "id": "01",
+        "general": "수시입출금 예금",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "02",
+        "general": "적립식 예금",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "03",
+        "general": "거치식 예금",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "11",
+        "general": "신탁",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "12",
+        "general": "투자신탁",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "21",
+        "general": "주식(장내)",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "22",
+        "general": "주식(장외)",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "23",
+        "general": "CMA",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "24",
+        "general": "Wrap",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "25",
+        "general": "증권저축",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "26",
+        "general": "퇴직연금",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "27",
+        "general": "주식(해외)",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "28",
+        "general": "주식종합계좌",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "30",
+        "general": "가상자산",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "31",
+        "general": "채권(기명)",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "32",
+        "general": "채권(무기명)",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "41",
+        "general": "대출(담보)",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "42",
+        "general": "대출(신용)",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "51",
+        "general": "파생(선물)",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "52",
+        "general": "파생(옵션)",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "53",
+        "general": "파생(스왑)",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "59",
+        "general": "파생(기타)기재",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "61",
+        "general": "보험(보장)",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "62",
+        "general": "보험(연금)",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "63",
+        "general": "보험(저축)",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "64",
+        "general": "보험(투자)",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "65",
+        "general": "보험(일반손해)",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "66",
+        "general": "보험(재보험)",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "67",
+        "general": "할부금융",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "68",
+        "general": "리스",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "69",
+        "general": "금현물",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "70",
+        "general": null,
+        "casino": "블랙잭",
+        "remark": null
+      },
+      {
+        "id": "71",
+        "general": null,
+        "casino": "룰렛",
+        "remark": null
+      },
+      {
+        "id": "72",
+        "general": null,
+        "casino": "바카라",
+        "remark": null
+      },
+      {
+        "id": "73",
+        "general": null,
+        "casino": "다이사이",
+        "remark": null
+      },
+      {
+        "id": "74",
+        "general": null,
+        "casino": "슬롯머신",
+        "remark": null
+      },
+      {
+        "id": "75",
+        "general": null,
+        "casino": "비디오포커",
+        "remark": null
+      },
+      {
+        "id": "76",
+        "general": null,
+        "casino": "케리비언포커",
+        "remark": null
+      },
+      {
+        "id": "77",
+        "general": null,
+        "casino": "파이고우포커",
+        "remark": null
+      },
+      {
+        "id": "78",
+        "general": null,
+        "casino": "렛잇라이드포커",
+        "remark": null
+      },
+      {
+        "id": "79",
+        "general": null,
+        "casino": "키노",
+        "remark": null
+      },
+      {
+        "id": "80",
+        "general": null,
+        "casino": "빅휠",
+        "remark": null
+      },
+      {
+        "id": "81",
+        "general": null,
+        "casino": "빠이까우",
+        "remark": null
+      },
+      {
+        "id": "82",
+        "general": null,
+        "casino": "판탄",
+        "remark": null
+      },
+      {
+        "id": "83",
+        "general": null,
+        "casino": "죠커세븐",
+        "remark": null
+      },
+      {
+        "id": "84",
+        "general": null,
+        "casino": "라운드크랩스",
+        "remark": null
+      },
+      {
+        "id": "85",
+        "general": null,
+        "casino": "마작",
+        "remark": null
+      },
+      {
+        "id": "86",
+        "general": null,
+        "casino": "프랜치볼",
+        "remark": null
+      },
+      {
+        "id": "87",
+        "general": null,
+        "casino": "챠카락",
+        "remark": null
+      },
+      {
+        "id": "88",
+        "general": null,
+        "casino": "트란타콰란타",
+        "remark": null
+      },
+      {
+        "id": "91",
+        "general": "해당사항 없음",
+        "casino": "해당사항 없음",
+        "remark": null
+      },
+      {
+        "id": "99",
+        "general": "기타",
+        "casino": "기타",
+        "remark": null
+      }
+    ],
+    "유가증권종류": [
+      {
+        "id": "01",
+        "general": "환어음",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "02",
+        "general": "약속어음",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "03",
+        "general": "국채",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "04",
+        "general": "공채",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "05",
+        "general": "자기앞수표",
+        "casino": "자기앞수표",
+        "remark": null
+      },
+      {
+        "id": "06",
+        "general": "당좌수표",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "07",
+        "general": "가계당좌수표",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "08",
+        "general": "국고수표",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "09",
+        "general": "양도성예금증서",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "10",
+        "general": "여행자수표",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "99",
+        "general": "기타",
+        "casino": "기타",
+        "remark": null
+      }
+    ],
+    "발행인/최종소지인구분": [
+      {
+        "id": "1",
+        "general": "발행자",
+        "casino": "발행자",
+        "remark": null
+      },
+      {
+        "id": "3",
+        "general": "최종소지인",
+        "casino": "최종소지인",
+        "remark": null
+      }
+    ],
+    "외환거래목적": [
+      {
+        "id": "01",
+        "general": "증여송금",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "02",
+        "general": "여행경비",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "03",
+        "general": "유학경비",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "04",
+        "general": "해외체제비",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "05",
+        "general": "해외이주비",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "06",
+        "general": "외화예금",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "07",
+        "general": "해외직접투자",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "08",
+        "general": "무역거래",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "09",
+        "general": "무역외거래",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "91",
+        "general": "알수없음",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "99",
+        "general": "기타",
+        "casino": null,
+        "remark": null
+      }
+    ],
+    "보험료납입방법": [
+      {
+        "id": "01",
+        "general": "일시납",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "02",
+        "general": "연납",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "03",
+        "general": "선납/완납",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "04",
+        "general": "환불/취소",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "05",
+        "general": "월납",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "99",
+        "general": "기타",
+        "casino": null,
+        "remark": null
+      }
+    ],
+    "계좌주구분": [
+      {
+        "id": "01",
+        "general": "개인",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "02",
+        "general": "법인",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "91",
+        "general": "알수없음",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "99",
+        "general": "기타",
+        "casino": null,
+        "remark": null
+      }
+    ],
+    "계좌유형구분": [
+      {
+        "id": "01",
+        "general": "관련계좌",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "02",
+        "general": "송/수취계좌",
+        "casino": null,
+        "remark": null
+      }
+    ],
+    "거래목적": [
+      {
+        "id": "01",
+        "general": "물품등사업상 대금결제",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "02",
+        "general": "차입 등 부채상환",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "03",
+        "general": "상속증여성거래",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "99",
+        "general": "기타(기재)",
+        "casino": null,
+        "remark": null
+      }
+    ],
+    "추정자산규모": [
+      {
+        "id": "01",
+        "general": "10억원 미만",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "02",
+        "general": "10억원이상 100억원 미만",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "03",
+        "general": "100억원이상 1000억원 미만",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "04",
+        "general": "1000억원 이상",
+        "casino": null,
+        "remark": null
+      }
+    ],
+    "계좌개설목적": [
+      {
+        "id": "01",
+        "general": "급여 및 생활비",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "02",
+        "general": "저축 및 투자",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "03",
+        "general": "보험료납부 결제",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "04",
+        "general": "공과금납부 결제",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "05",
+        "general": "카드대금 결제",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "06",
+        "general": "대출원리금 상환 결제",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "07",
+        "general": "사업상거래",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "08",
+        "general": "보장",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "09",
+        "general": "상속",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "99",
+        "general": "기타(기재)",
+        "casino": null,
+        "remark": null
+      }
+    ],
+    "상장구분\n서식3면": [
+      {
+        "id": "01",
+        "general": "유가증권시장",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "02",
+        "general": "코스닥시장",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "03",
+        "general": "뉴욕증권거래소",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "04",
+        "general": "NASDAQ",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "05",
+        "general": "런던증권거래소",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "06",
+        "general": "홍콩증권거래소",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "99",
+        "general": "기타(기재)",
+        "casino": null,
+        "remark": null
+      }
+    ],
+    "거래자와 관계": [
+      {
+        "id": "02",
+        "general": "부모",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "03",
+        "general": "배우자",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "04",
+        "general": "자녀",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "05",
+        "general": "형제",
+        "casino": "형제자매",
+        "remark": null
+      },
+      {
+        "id": "07",
+        "general": "친지",
+        "casino": "친척",
+        "remark": null
+      },
+      {
+        "id": "08",
+        "general": "직장동료",
+        "casino": "동료(친구)",
+        "remark": null
+      },
+      {
+        "id": "12",
+        "general": "상사",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "98",
+        "general": "알수없음",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "99",
+        "general": "기타(기재)",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "70",
+        "general": null,
+        "casino": "카지노관광 알선업자",
+        "remark": null
+      },
+      {
+        "id": "71",
+        "general": null,
+        "casino": "여행가이드",
+        "remark": null
+      },
+      {
+        "id": "72",
+        "general": null,
+        "casino": "직원",
+        "remark": null
+      }
+    ],
+    "기업규모코드": [
+      {
+        "id": "01",
+        "general": "대기업",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "id": "02",
+        "general": "중소기업",
+        "casino": null,
+        "remark": null
+      }
+    ],
+    "혐의객관식질의코드": [
+      {
+        "kind": "title",
+        "title_code": "100",
+        "detail_code": null,
+        "general": "의심스러운 거래자의 태도 및 특징관련",
+        "casino": "의심스러운 거래자의 태도 및 특징관련",
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "100",
+        "detail_code": "101",
+        "general": "실명노출 기피 또는 거래에 대한 비밀요구",
+        "casino": "실명노출 기피 또는 거래에 대한 비밀요구",
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "100",
+        "detail_code": "102",
+        "general": "거래에 대한 합당한 답변 불제공 또는 자금출처가 불분명한 거래",
+        "casino": "거래에 대한 합당한 답변 불제공 또는 자금출처가 불분명한 거래",
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "100",
+        "detail_code": "103",
+        "general": "업력이나 업체규모, 개인능력에 비해 과다한 거래실적",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "100",
+        "detail_code": "104",
+        "general": "언행, 행색과 거래금액간의 부조화",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "100",
+        "detail_code": "105",
+        "general": "중요인물 관련거래",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "100",
+        "detail_code": "106",
+        "general": "어색하고 불안한 태도 및 언행",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "100",
+        "detail_code": "107",
+        "general": "사전거래가 없는 고객의 의심스러운 거래 요청",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "100",
+        "detail_code": "108",
+        "general": "의심스러운 동행자 참여거래",
+        "casino": "의심스러운 동행자 참여거래",
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "100",
+        "detail_code": "109",
+        "general": "불특정다수와의 거래",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "100",
+        "detail_code": "110",
+        "general": "계약자 또는 수익자의 빈번하거나 갑작스런 변경",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "100",
+        "detail_code": "171",
+        "general": null,
+        "casino": "직원에게 뇌물 제공 또는 영향력 행사",
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "100",
+        "detail_code": "172",
+        "general": null,
+        "casino": "비정상적인 베팅",
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "100",
+        "detail_code": "173",
+        "general": null,
+        "casino": "게임 미참여 또는 최소한의 게임참여",
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "100",
+        "detail_code": "174",
+        "general": null,
+        "casino": "여러 금융기관 발행 지불수단 사용",
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "100",
+        "detail_code": "175",
+        "general": null,
+        "casino": "다양한 종류의 지불수단 교환 요청",
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "100",
+        "detail_code": "176",
+        "general": null,
+        "casino": "거액의 소액권을 고액권으로 교환 요청",
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "100",
+        "detail_code": "177",
+        "general": null,
+        "casino": "다양한 권종의 수표발행 요청",
+        "remark": null
+      },
+      {
+        "kind": "title",
+        "title_code": "200",
+        "detail_code": null,
+        "general": "거래유형 관련",
+        "casino": "거래유형 관련",
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "200",
+        "detail_code": "201",
+        "general": "갑작스러운 거래패턴의 변화",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "200",
+        "detail_code": "202",
+        "general": "원격지 거래",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "200",
+        "detail_code": "203",
+        "general": "교환거래",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "200",
+        "detail_code": "204",
+        "general": "분할거래",
+        "casino": "분할거래",
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "200",
+        "detail_code": "206",
+        "general": "현금에 집착하는 거래",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "200",
+        "detail_code": "207",
+        "general": "거액 입금 후 당일 또는 익일 중 인출",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "200",
+        "detail_code": "210",
+        "general": "무기명증서(무기명채권, CD, CP등) 관련거래",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "200",
+        "detail_code": "211",
+        "general": "계좌개설없이 거액의 환전요구 또는 외국으로의 송금",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "200",
+        "detail_code": "212",
+        "general": "의심스러운 담보대출 또는 보험계약 즉시 약관대출",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "200",
+        "detail_code": "213",
+        "general": "주금 납입거래 또는 예금잔액증명서 발급(요청)",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "200",
+        "detail_code": "214",
+        "general": "다중거래의 동시요청",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "200",
+        "detail_code": "215",
+        "general": "빈번한 입출금(입출고)",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "200",
+        "detail_code": "216",
+        "general": "의심스러운 대여금고 또는 보호예수 거래",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "200",
+        "detail_code": "217",
+        "general": "법인자산 또는 타인자산 담보 거래",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "200",
+        "detail_code": "218",
+        "general": "무관업종 또는 의심스런 재산에 대한 보험청약 거래",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "200",
+        "detail_code": "226",
+        "general": "테러자금으로 의심되는 거래",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "200",
+        "detail_code": "271",
+        "general": null,
+        "casino": "Cut-off 시간 전후의 분할거래",
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "200",
+        "detail_code": "272",
+        "general": null,
+        "casino": "타인명의 거래",
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "200",
+        "detail_code": "273",
+        "general": null,
+        "casino": "거액의 칩스 미교환 반출",
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "200",
+        "detail_code": "274",
+        "general": null,
+        "casino": "칩스 교환금액이 칩스 구매금액과 게임수익금액의 합계액 이상인 경우",
+        "remark": null
+      },
+      {
+        "kind": "title",
+        "title_code": "300",
+        "detail_code": null,
+        "general": "금융사고 또는 긴급조사가 요청되는 사건 관련",
+        "casino": "금융사고 또는 긴급조사가 요청되는 사건 관련",
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "300",
+        "detail_code": "301",
+        "general": "금융사고 등 거액횡령이 의심되는 거래",
+        "casino": "금융사고 등 거액횡령이 의심되는 거래",
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "300",
+        "detail_code": "302",
+        "general": "뇌물공여 및 뇌물수수 등이 의심되는 거래",
+        "casino": "뇌물공여 및 뇌물수수 등이 의심되는 거래",
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "300",
+        "detail_code": "303",
+        "general": "거액의 외화도피로 추정되는 거래",
+        "casino": "거액의 외화도피로 추정되는 거래",
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "300",
+        "detail_code": "304",
+        "general": "조직범죄 및 강.절도 등 강력사건 연루가 의심되는 거래",
+        "casino": "조직범죄 및 강.절도 등 강력사건 연루가 의심되는 거래",
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "300",
+        "detail_code": "305",
+        "general": "테러자금으로 의심되는 거래",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "300",
+        "detail_code": "306",
+        "general": "기타 사회통념상 긴급조사(우선조사)가 요망되는 거래",
+        "casino": "기타 사회통념상 긴급조사(우선조사)가 요망되는 거래",
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "300",
+        "detail_code": "307",
+        "general": "수사기관으로부터 자료제공 요청을 받은 거래",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "300",
+        "detail_code": "371",
+        "general": null,
+        "casino": "서명위조 또는 위변조된 신분증 제시",
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "300",
+        "detail_code": "372",
+        "general": null,
+        "casino": "위조된 지불수단 사용",
+        "remark": null
+      },
+      {
+        "kind": "title",
+        "title_code": "400",
+        "detail_code": null,
+        "general": "계좌정보 관련",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "400",
+        "detail_code": "401",
+        "general": "타인의 명의 또는 계좌의 이용 (다수계좌여부-여)",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "400",
+        "detail_code": "402",
+        "general": "타인의 명의 또는 계좌의 이용 (다수계좌여부-부)",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "400",
+        "detail_code": "403",
+        "general": "특별한 사유없이 복수의 계좌개설 (계좌주 동일 여부 - 여)",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "400",
+        "detail_code": "404",
+        "general": "특별한 사유없이 복수의 계좌개설 (계좌주 동일 여부 - 부)",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "400",
+        "detail_code": "405",
+        "general": "의심스러운 계약/계좌 해지",
+        "casino": null,
+        "remark": null
+      },
+      {
+        "kind": "detail",
+        "title_code": "400",
+        "detail_code": "406",
+        "general": "단발성 계좌의 이용",
+        "casino": null,
+        "remark": null
+      }
+    ]
+  },
+  "elements": [
+    {
+      "path": "/STR",
+      "xml": "<str:STR Version=\"5.0\" Code=\"\">",
+      "tag": "str:STR",
+      "level": 1,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [
+        "Version",
+        "Code"
+      ],
+      "desc_general": "STR보고서\n버전정보*\n일반/카지노 구분* ",
+      "desc_casino": "STR보고서\n버전정보*\n일반/카지노 구분*",
+      "attr_constraints": "fixed\nrequired",
+      "data_length": "3\n2",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Organization",
+      "xml": "<Organization>",
+      "tag": "Organization",
+      "level": 2,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "보고기관정보",
+      "desc_casino": "보고기관정보",
+      "attr_constraints": null,
+      "data_length": null,
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Organization/OrgName",
+      "xml": "<OrgName Code=\"\">",
+      "tag": "OrgName",
+      "level": 3,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [
+        "Code"
+      ],
+      "desc_general": "보고기관명\n보고기관코드*",
+      "desc_casino": "보고기관명\n보고기관코드*",
+      "attr_constraints": "required",
+      "data_length": "-\n6",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Organization/MainAuthor",
+      "xml": "<MainAuthor Userid=\"\">",
+      "tag": "MainAuthor",
+      "level": 3,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [
+        "Userid"
+      ],
+      "desc_general": "보고담당자명\n보고자 아이디*",
+      "desc_casino": "보고담당자명\n보고자 아이디*",
+      "attr_constraints": "optional",
+      "data_length": "60\n20",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Organization/Manager",
+      "xml": "<Manager>",
+      "tag": "Manager",
+      "level": 3,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "보고책임자명",
+      "desc_casino": "보고책임자명",
+      "attr_constraints": "required",
+      "data_length": "60",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Organization/Phone",
+      "xml": "<Phone>",
+      "tag": "Phone",
+      "level": 3,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "보고담당자전화번호",
+      "desc_casino": "보고담당자전화번호",
+      "attr_constraints": "required",
+      "data_length": "25",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Organization/Address",
+      "xml": "<Address ZipCode=\"\">",
+      "tag": "Address",
+      "level": 3,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [
+        "ZipCode"
+      ],
+      "desc_general": "주소\n우편번호*",
+      "desc_casino": "주소\n우편번호*",
+      "attr_constraints": "required",
+      "data_length": "200\n6",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Organization/Email",
+      "xml": "<Email>",
+      "tag": "Email",
+      "level": 3,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "이메일",
+      "desc_casino": "이메일",
+      "attr_constraints": null,
+      "data_length": "30",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Master",
+      "xml": "<Master>",
+      "tag": "Master",
+      "level": 2,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "STR 취합내용 + 의심정도",
+      "desc_casino": "STR 취합내용 + 의심정도",
+      "attr_constraints": null,
+      "data_length": null,
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Master/FiuDocNum",
+      "xml": "<FiuDocNum>",
+      "tag": "FiuDocNum",
+      "level": 3,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "보고번호",
+      "desc_casino": "보고번호",
+      "attr_constraints": "required",
+      "data_length": "17",
+      "constraint1": "금칙어 체크(<,>,\",;)",
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "forbidden_chars",
+          "description": "금칙어 체크(<,>,\",;)"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Master/FormerFiuDocNum",
+      "xml": "<FormerFiuDocNum>",
+      "tag": "FormerFiuDocNum",
+      "level": 3,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "종전 보고문서번호",
+      "desc_casino": "종전 보고문서번호",
+      "attr_constraints": null,
+      "data_length": "17",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Master/StartDate",
+      "xml": "<StartDate>",
+      "tag": "StartDate",
+      "level": 3,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "거래시작일",
+      "desc_casino": "거래시작일",
+      "attr_constraints": "required",
+      "data_length": "8",
+      "constraint1": "YYYYMMDD",
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "date_format",
+          "pattern": "YYYYMMDD"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Master/EndDate",
+      "xml": "<EndDate>",
+      "tag": "EndDate",
+      "level": 3,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "거래종료일",
+      "desc_casino": "거래종료일",
+      "attr_constraints": "required",
+      "data_length": "8",
+      "constraint1": "YYYYMMDD",
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "date_format",
+          "pattern": "YYYYMMDD"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Master/InnerCount",
+      "xml": "<InnerCount>",
+      "tag": "InnerCount",
+      "level": 3,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "입금횟수",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": "numeric(4)",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Master/OuterCount",
+      "xml": "<OuterCount>",
+      "tag": "OuterCount",
+      "level": 3,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "출금횟수",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": "numeric(4)",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Master/InnerKRWAmount",
+      "xml": "<InnerKRWAmount>",
+      "tag": "InnerKRWAmount",
+      "level": 3,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "입금원화금액",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": "numeric(15)",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Master/OuterKRWAmount",
+      "xml": "<OuterKRWAmount>",
+      "tag": "OuterKRWAmount",
+      "level": 3,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "출금원화금액",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": "numeric(15)",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Master/InnerUSDAmount",
+      "xml": "<InnerUSDAmount>",
+      "tag": "InnerUSDAmount",
+      "level": 3,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "입금달러화금액",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": "numeric(15)",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Master/OuterUSDAmount",
+      "xml": "<OuterUSDAmount>",
+      "tag": "OuterUSDAmount",
+      "level": 3,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "출금달러화금액",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": "numeric(15)",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Master/Count",
+      "xml": "<Count>",
+      "tag": "Count",
+      "level": 3,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "거래건수",
+      "desc_casino": "거래건수",
+      "attr_constraints": null,
+      "data_length": "numeric(4)",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "references",
+          "tags": [
+            "InnerCount",
+            "OuterCount"
+          ],
+          "description": "  default값 : 0, <InnerCount> + <OuterCount>"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Master/KRWAmount",
+      "xml": "<KRWAmount>",
+      "tag": "KRWAmount",
+      "level": 3,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "원화금액",
+      "desc_casino": "원화금액",
+      "attr_constraints": null,
+      "data_length": "numeric(15)",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "references",
+          "tags": [
+            "InnerKRWAmount",
+            "OuterKRWAmount"
+          ],
+          "description": "  default값 : 0, <InnerKRWAmount> + <OuterKRWAmount>"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Master/USDAmount",
+      "xml": "<USDAmount>",
+      "tag": "USDAmount",
+      "level": 3,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "달러화환산금액",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": "numeric(15)",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "references",
+          "tags": [
+            "InnerUSDAmount",
+            "OuterUSDAmount"
+          ],
+          "description": "  default값 : 0, <InnerUSDAmount> + <OuterUSDAmount>"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Master/MessageTypeCode",
+      "xml": "<MessageTypeCode>",
+      "tag": "MessageTypeCode",
+      "level": 3,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "보고구분",
+      "desc_casino": "보고구분",
+      "attr_constraints": "required",
+      "data_length": "2",
+      "constraint1": "01, 04, 96, 99 중 택일",
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Master/DocSendDate",
+      "xml": "<DocSendDate>",
+      "tag": "DocSendDate",
+      "level": 3,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "보고일자",
+      "desc_casino": "보고일자",
+      "attr_constraints": "required",
+      "data_length": "8",
+      "constraint1": "YYYYMMDD",
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "date_format",
+          "pattern": "YYYYMMDD"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Master/Suspicion",
+      "xml": "<Suspicion>",
+      "tag": "Suspicion",
+      "level": 3,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "의심스러운 거래유형 및 정도에 관한 정보",
+      "desc_casino": "의심스러운 거래유형 및 정도에 관한 정보",
+      "attr_constraints": null,
+      "data_length": null,
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Master/Suspicion/QuestionTitle",
+      "xml": "<QuestionTitle Code=\"\">",
+      "tag": "QuestionTitle",
+      "level": 4,
+      "cardinality": {
+        "min": 1,
+        "max": null
+      },
+      "attributes": [
+        "Code"
+      ],
+      "desc_general": "대항목명\n대항목코드*",
+      "desc_casino": "대항목명\n대항목코드*",
+      "attr_constraints": "required",
+      "data_length": "-\nnumeric(3)",
+      "constraint1": "코드 체크",
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "code_set_check",
+          "ref": "혐의객관식질의코드",
+          "description": "코드 체크  혐의객관식질의코드 참조"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Master/Suspicion/QuestionTitle/Question",
+      "xml": "<Question Code=\"\">",
+      "tag": "Question",
+      "level": 5,
+      "cardinality": {
+        "min": 1,
+        "max": null
+      },
+      "attributes": [
+        "Code"
+      ],
+      "desc_general": "세부항목명\n세부항목코드*",
+      "desc_casino": "세부항목명\n세부항목코드*",
+      "attr_constraints": "required",
+      "data_length": "-\nnumeric(3)",
+      "constraint1": "코드 체크",
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "code_set_check",
+          "ref": "혐의객관식질의코드",
+          "description": "코드 체크  혐의객관식질의코드 참조"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Master/SuspicionReport",
+      "xml": "<SuspicionReport>",
+      "tag": "SuspicionReport",
+      "level": 3,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "의심스러운 거래에 대한 서술",
+      "desc_casino": "의심스러운 거래에 대한 서술",
+      "attr_constraints": null,
+      "data_length": null,
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Master/SuspicionReport/Who",
+      "xml": "<Who>",
+      "tag": "Who",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "의심스러운 거래자 관련",
+      "desc_casino": "의심스러운 거래자 관련",
+      "attr_constraints": null,
+      "data_length": 3000,
+      "constraint1": "금칙어 체크(<,>,\",;)",
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "forbidden_chars",
+          "description": "금칙어 체크(<,>,\",;)"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Master/SuspicionReport/When",
+      "xml": "<When>",
+      "tag": "When",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "거래 발생일자 관련",
+      "desc_casino": "거래 발생일자 관련",
+      "attr_constraints": null,
+      "data_length": 3000,
+      "constraint1": "금칙어 체크(<,>,\",;)",
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "forbidden_chars",
+          "description": "금칙어 체크(<,>,\",;)"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Master/SuspicionReport/Where",
+      "xml": "<Where>",
+      "tag": "Where",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "거래 발생 장소 관련",
+      "desc_casino": "거래 발생 장소 관련",
+      "attr_constraints": null,
+      "data_length": 3000,
+      "constraint1": "금칙어 체크(<,>,\",;)",
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "forbidden_chars",
+          "description": "금칙어 체크(<,>,\",;)"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Master/SuspicionReport/What",
+      "xml": "<What>",
+      "tag": "What",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "금융거래 수단 관련",
+      "desc_casino": "금융거래 수단 관련",
+      "attr_constraints": null,
+      "data_length": 3000,
+      "constraint1": "금칙어 체크(<,>,\",;)",
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "forbidden_chars",
+          "description": "금칙어 체크(<,>,\",;)"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Master/SuspicionReport/How",
+      "xml": "<How>",
+      "tag": "How",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "금융거래 방법 관련",
+      "desc_casino": "금융거래 방법 관련",
+      "attr_constraints": null,
+      "data_length": 3000,
+      "constraint1": "금칙어 체크(<,>,\",;)",
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "forbidden_chars",
+          "description": "금칙어 체크(<,>,\",;)"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Master/SuspicionReport/Why",
+      "xml": "<Why>",
+      "tag": "Why",
+      "level": 4,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "혐의거래로 판단한 사유관련",
+      "desc_casino": "혐의거래로 판단한 사유관련",
+      "attr_constraints": "required",
+      "data_length": 3000,
+      "constraint1": "금칙어 체크(<,>,\",;)",
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "forbidden_chars",
+          "description": "금칙어 체크(<,>,\",;)"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Master/SuspicionReport/SyntheticOpinion",
+      "xml": "<SyntheticOpinion>",
+      "tag": "SyntheticOpinion",
+      "level": 4,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "종합의견 ",
+      "desc_casino": "종합의견 ",
+      "attr_constraints": "required",
+      "data_length": 6000,
+      "constraint1": "금칙어 체크(<,>,\",;)",
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "forbidden_chars",
+          "description": "금칙어 체크(<,>,\",;)"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Master/SuspicionReport/BranchOfficeScore",
+      "xml": "<BranchOfficeScore>",
+      "tag": "BranchOfficeScore",
+      "level": 4,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "영업점의심점수",
+      "desc_casino": null,
+      "attr_constraints": "required",
+      "data_length": 10,
+      "constraint1": "1에서5사이의 정수",
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Master/SuspicionReport/OrgScore",
+      "xml": "<OrgScore>",
+      "tag": "OrgScore",
+      "level": 4,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "본점의심점수",
+      "desc_casino": "본점의심점수",
+      "attr_constraints": "required",
+      "data_length": 10,
+      "constraint1": "1에서5사이의 정수",
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Master/SuspicionReport/RelationFiuDocNum",
+      "xml": "<RelationFiuDocNum>",
+      "tag": "RelationFiuDocNum",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "관련문서 보고번호",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": "17",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Master/SuspicionReport/EtcPecularityType",
+      "xml": "<EtcPecularityType>",
+      "tag": "EtcPecularityType",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "기타 특징및 유형 ",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": 3000,
+      "constraint1": "금칙어 체크(<,>,\",;)",
+      "constraint2": null,
+      "optional_required": "의심스러운 거래유형이 \n없을 경우 필수",
+      "rules": [
+        {
+          "type": "forbidden_chars",
+          "description": "금칙어 체크(<,>,\",;)"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail",
+      "xml": "<Detail>",
+      "tag": "Detail",
+      "level": 2,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "상세내용",
+      "desc_casino": "상세내용",
+      "attr_constraints": null,
+      "data_length": null,
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/Transaction",
+      "xml": "<Transaction>",
+      "tag": "Transaction",
+      "level": 3,
+      "cardinality": {
+        "min": 1,
+        "max": null
+      },
+      "attributes": [],
+      "desc_general": "거래내역",
+      "desc_casino": "거래내역",
+      "attr_constraints": null,
+      "data_length": null,
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/Transaction/Seq",
+      "xml": "<Seq>",
+      "tag": "Seq",
+      "level": 4,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "거래일련번호",
+      "desc_casino": "거래일련번호",
+      "attr_constraints": "required",
+      "data_length": "numeric(3)",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/Transaction/Date",
+      "xml": "<Date>",
+      "tag": "Date",
+      "level": 4,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "거래일자",
+      "desc_casino": "거래일자",
+      "attr_constraints": "required",
+      "data_length": "8",
+      "constraint1": "YYYYMMDD\n(1900년 이후이고\n보고일보다 이전일자)\n",
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "date_format",
+          "pattern": "YYYYMMDD"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/Transaction/Time",
+      "xml": "<Time>",
+      "tag": "Time",
+      "level": 4,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "거래발생시간",
+      "desc_casino": "거래발생시간",
+      "attr_constraints": "required",
+      "data_length": "6",
+      "constraint1": "HHMISS",
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/Transaction/Channel",
+      "xml": "<Channel Code=\"\">",
+      "tag": "Channel",
+      "level": 4,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [
+        "Code"
+      ],
+      "desc_general": "거래채널명\n거래채널코드*",
+      "desc_casino": "거래채널명\n거래채널코드*",
+      "attr_constraints": "required",
+      "data_length": "50\n3",
+      "constraint1": "코드 체크",
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "code_set_check",
+          "ref": "거래채널코드",
+          "description": "코드 체크  거래채널코드 참조"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/Transaction/Mean",
+      "xml": "<Mean Code=\"\">",
+      "tag": "Mean",
+      "level": 4,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [
+        "Code"
+      ],
+      "desc_general": "거래수단명\n거래수단코드*",
+      "desc_casino": "거래수단명\n거래수단코드*",
+      "attr_constraints": "required",
+      "data_length": "50\n3",
+      "constraint1": "코드 체크",
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "code_set_check",
+          "ref": "거래수단코드",
+          "description": "코드 체크  거래수단명 최대 16자리\n거래수단코드 참조"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/Transaction/Method",
+      "xml": "<Method Code=\"\">",
+      "tag": "Method",
+      "level": 4,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [
+        "Code"
+      ],
+      "desc_general": "거래종류명\n거래종류코드*",
+      "desc_casino": "거래종류명\n거래종류코드*",
+      "attr_constraints": "required",
+      "data_length": "50\n3",
+      "constraint1": "코드 체크",
+      "constraint2": "거래종류코드가 '31'(가상자산 매도), '32'(가상자산 매수)인 경우 계좌 정보(<AccountRelation>, <Account>)는 필수여야 함",
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "code_set_check",
+          "ref": "거래종류코드",
+          "description": "코드 체크 거래종류코드가 '31'(가상자산 매도), '32'(가상자산 매수)인 경우 계좌 정보(<AccountRelation>, <Account>)는 필수여야 함 거래종류코드 참조"
+        },
+        {
+          "type": "references",
+          "tags": [
+            "Account",
+            "AccountRelation"
+          ],
+          "description": "코드 체크 거래종류코드가 '31'(가상자산 매도), '32'(가상자산 매수)인 경우 계좌 정보(<AccountRelation>, <Account>)는 필수여야 함 거래종류코드 참조"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/Transaction/Goods",
+      "xml": "<Goods Code=\"\">",
+      "tag": "Goods",
+      "level": 4,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [
+        "Code"
+      ],
+      "desc_general": "거래상품명\n거래상품코드*",
+      "desc_casino": "게임종류명\n게임종류코드*",
+      "attr_constraints": "required",
+      "data_length": "50\n3",
+      "constraint1": "코드 체크",
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "code_set_check",
+          "ref": "거래상품코드",
+          "description": "코드 체크  거래상품코드 참조"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/Transaction/MoneyType",
+      "xml": "<MoneyType Code=\"\">",
+      "tag": "MoneyType",
+      "level": 4,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [
+        "Code"
+      ],
+      "desc_general": "통화명\n통화종류코드*",
+      "desc_casino": "통화명\n통화종류코드*",
+      "attr_constraints": "required",
+      "data_length": "-\n3",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/Transaction/KRWAmount",
+      "xml": "<KRWAmount>",
+      "tag": "KRWAmount",
+      "level": 4,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "원화거래금액",
+      "desc_casino": "원화거래금액",
+      "attr_constraints": null,
+      "data_length": "numeric(17,2)",
+      "constraint1": null,
+      "constraint2": "통화종류가 KRW이고 거래종류코드가 '99'(기타)가 아닐 경우\n값은 1이상이어야 함",
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/Transaction/ForeignAmount",
+      "xml": "<ForeignAmount>",
+      "tag": "ForeignAmount",
+      "level": 4,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "외국환거래금액",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": "numeric(17,2)",
+      "constraint1": null,
+      "constraint2": "통화종류가 KRW가 아니고  거래종류코드가 '99'(기타)가 아닐 경우 값은 1이상이어야 함",
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/Transaction/USDAmount",
+      "xml": "<USDAmount>",
+      "tag": "USDAmount",
+      "level": 4,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "달러화환산금액",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": "numeric(17,2)",
+      "constraint1": null,
+      "constraint2": "통화종류가 KRW가 아니고  거래종류코드가 '99'(기타)가 아닐 경우 값은 1이상이어야 함",
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/Transaction/OrgName",
+      "xml": "<OrgName Code=\"\">",
+      "tag": "OrgName",
+      "level": 4,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [
+        "Code"
+      ],
+      "desc_general": "금융기관명\n금융기관코드*",
+      "desc_casino": "금융기관명\n금융기관코드*",
+      "attr_constraints": "required",
+      "data_length": "-\n6",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/Transaction/BranchOffce",
+      "xml": "<BranchOffce ZipCode=\"\" Code=\"\">",
+      "tag": "BranchOffce",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [
+        "ZipCode",
+        "Code"
+      ],
+      "desc_general": "지점명\n우편번호*\n지점코드*",
+      "desc_casino": null,
+      "attr_constraints": "required\nrequired",
+      "data_length": "50\n6\n7",
+      "constraint1": "지점명 금칙어 체크(<,>,\",;)",
+      "constraint2": null,
+      "optional_required": "거래채널코드가 '02','04','06' \n(자동화기기, 인터넷뱅킹, 콜센터)\n이외의 경우에 필수",
+      "rules": [
+        {
+          "type": "forbidden_chars",
+          "description": "지점명 금칙어 체크(<,>,\",;)"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/Transaction/UserRelation",
+      "xml": "<UserRelation>",
+      "tag": "UserRelation",
+      "level": 4,
+      "cardinality": {
+        "min": 1,
+        "max": null
+      },
+      "attributes": [],
+      "desc_general": "거래에대한 거래자역할",
+      "desc_casino": "거래에대한 거래자역할",
+      "attr_constraints": null,
+      "data_length": null,
+      "constraint1": null,
+      "constraint2": "<UserRelation>이 여러 번 반복될 때\n거래역할코드가 중복되면 안됨",
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "references",
+          "tags": [
+            "UserRelation"
+          ],
+          "description": " <UserRelation>이 여러 번 반복될 때\n거래역할코드가 중복되면 안됨 "
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/Transaction/UserRelation/RelationRole",
+      "xml": "<RelationRole Code=\"\">",
+      "tag": "RelationRole",
+      "level": 5,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [
+        "Code"
+      ],
+      "desc_general": "거래자역할\n거래역할코드*",
+      "desc_casino": "거래자역할\n거래역할코드*",
+      "attr_constraints": "required",
+      "data_length": "-\n2",
+      "constraint1": "코드 체크",
+      "constraint2": "1. 의심거래자인 '01' 코드는 반드시 1개 존재해야함\n2. '03'거래대리인일 경우 '01'의심거래자가 존재해야함\n3. '09'관련계좌개설대리인일 경우 '08'관련계좌 개설자가 존재해야함\n4. '12'당행송수취 계좌개설 대리인일 경우 '11'당행송수취 계좌개설자가 존재해야함",
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "code_set_check",
+          "ref": "거래역할코드",
+          "description": "코드 체크 1. 의심거래자인 '01' 코드는 반드시 1개 존재해야함\n2. '03'거래대리인일 경우 '01'의심거래자가 존재해야함\n3. '09'관련계좌개설대리인일 경우 '08'관련계좌 개설자가 존재해야함\n4. '12'당행송수취 계좌개설 대리인일 경우 '11'당행송수취 계좌개설자가 존재해야함 거래역할코드 참조"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/Transaction/UserRelation/RealNumber",
+      "xml": "<RealNumber Code=\"\">",
+      "tag": "RealNumber",
+      "level": 5,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [
+        "Code"
+      ],
+      "desc_general": "실명번호\n실명번호구분코드*",
+      "desc_casino": "실명번호\n실명번호구분코드*",
+      "attr_constraints": "required",
+      "data_length": "20\n2",
+      "constraint1": "코드 체크",
+      "constraint2": "1. 실명번호구분코드가 '01','02','03'일 경우 실명번호 Digit 체크\n2. 실명번호구분코드가 '08'인 경우 최대 20자리, 아닌 경우 최대 15자리까지 허용",
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "code_set_check",
+          "ref": null,
+          "description": "코드 체크 1. 실명번호구분코드가 '01','02','03'일 경우 실명번호 Digit 체크\n2. 실명번호구분코드가 '08'인 경우 최대 20자리, 아닌 경우 최대 15자리까지 허용 "
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/Transaction/UserRelation/CINumber",
+      "xml": "<CINumber>",
+      "tag": "CINumber",
+      "level": 5,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "CI 번호",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": "88",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": "실명번호구분코드가 '14'일 경우 필수"
+    },
+    {
+      "path": "/STR/Detail/Transaction/UserRelation/InsuRelDesc",
+      "xml": "<InsuRelDesc>",
+      "tag": "InsuRelDesc",
+      "level": 5,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "관계설명\n(거래역할코드가\n03일 경우:거래자와의 관계설명\n09일 경우:관련계좌주와의 관계설명\n12일 경우:관련계좌주와의 관계설명\n15일 경우:보험거래자와의 관계설명)",
+      "desc_casino": "관계설명\n(거래역할코드가\n03일 경우:거래자와의 관계설명)",
+      "attr_constraints": null,
+      "data_length": "100",
+      "constraint1": "금칙어 체크(<,>,\",;)\n",
+      "constraint2": null,
+      "optional_required": "거래역할코드가 \n'03','09','12','15'(거래 대리인,계좌개설 대리인,당행송수취 계좌개설 대리인,주피보험자)일 경우 필수입력",
+      "rules": [
+        {
+          "type": "forbidden_chars",
+          "description": "금칙어 체크(<,>,\",;)\n"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/Transaction/AccountRelation",
+      "xml": "<AccountRelation>",
+      "tag": "AccountRelation",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": null
+      },
+      "attributes": [],
+      "desc_general": "거래에대한 계좌관계",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": null,
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/Transaction/AccountRelation/OrgName",
+      "xml": "<OrgName Code=\"\">",
+      "tag": "OrgName",
+      "level": 5,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [
+        "Code"
+      ],
+      "desc_general": "금융기관명\n금융기관코드*",
+      "desc_casino": null,
+      "attr_constraints": "required",
+      "data_length": "-\n6",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/Transaction/AccountRelation/AccountNumber",
+      "xml": "<AccountNumber>",
+      "tag": "AccountNumber",
+      "level": 5,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "계좌번호",
+      "desc_casino": null,
+      "attr_constraints": "required",
+      "data_length": "30",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/Transaction/AccountRelation/AccountRole",
+      "xml": "<AccountRole Code=\"\">",
+      "tag": "AccountRole",
+      "level": 5,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [
+        "Code"
+      ],
+      "desc_general": "계좌분류\n계좌유형구분코드*",
+      "desc_casino": null,
+      "attr_constraints": "required",
+      "data_length": "-\n2",
+      "constraint1": "코드 체크",
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "code_set_check",
+          "ref": "계좌유형구분코드",
+          "description": "코드 체크  계좌유형구분코드 참조"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/Transaction/NonAccountRelation",
+      "xml": "<NonAccountRelation>",
+      "tag": "NonAccountRelation",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "관련계좌존재여부가 \"부\"일 경우",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": "1",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/Transaction/NonAccountRelation/TransactionPurpose",
+      "xml": "<TransactionPurpose Code=\"\">",
+      "tag": "TransactionPurpose",
+      "level": 5,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [
+        "Code"
+      ],
+      "desc_general": "거래목적\n거래목적코드*",
+      "desc_casino": null,
+      "attr_constraints": "required",
+      "data_length": "30\n2",
+      "constraint1": "코드 체크",
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "code_set_check",
+          "ref": "거래목적코드",
+          "description": "코드 체크  거래목적코드 참조(신규코드)"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/Transaction/Securities",
+      "xml": "<Securities>",
+      "tag": "Securities",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": null
+      },
+      "attributes": [],
+      "desc_general": "유가증권",
+      "desc_casino": "수표",
+      "attr_constraints": null,
+      "data_length": null,
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": "거래수단코드가 '02','04','08'(수표,채권,기타유가증권)이거나\n거래종류코드가 '16','17','22','23' (수표지급,수표발행,지급,발행)일 경우 필수"
+    },
+    {
+      "path": "/STR/Detail/Transaction/Securities/SecuritiesType",
+      "xml": "<SecuritiesType Code=\"\">",
+      "tag": "SecuritiesType",
+      "level": 5,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [
+        "Code"
+      ],
+      "desc_general": "관련유가증권의 종류",
+      "desc_casino": "수표 종류",
+      "attr_constraints": "required",
+      "data_length": "-\n2",
+      "constraint1": "코드 체크",
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "code_set_check",
+          "ref": "유가증권종류코드",
+          "description": "코드 체크  유가증권종류코드 참조"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/Transaction/Securities/SecuritiesNumber",
+      "xml": "<SecuritiesNumber>",
+      "tag": "SecuritiesNumber",
+      "level": 5,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "관련유가증권번호",
+      "desc_casino": "수표번호",
+      "attr_constraints": "required",
+      "data_length": "15",
+      "constraint1": "금칙어 체크(<,>,\",;)",
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "forbidden_chars",
+          "description": "금칙어 체크(<,>,\",;)"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/Transaction/Securities/OrgName",
+      "xml": "<OrgName Code=\"\">",
+      "tag": "OrgName",
+      "level": 5,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [
+        "Code"
+      ],
+      "desc_general": "지급은행명\n금융기관코드*",
+      "desc_casino": null,
+      "attr_constraints": "required",
+      "data_length": "-\n6",
+      "constraint1": null,
+      "constraint2": "지급은행과 발행은행 둘중 하나는 \n필수 기재해야함",
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/Transaction/Securities/BranchOffice",
+      "xml": "<BranchOffice>",
+      "tag": "BranchOffice",
+      "level": 5,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "지급영업점명",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": "50",
+      "constraint1": "금칙어 체크(<,>,\",;)",
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "forbidden_chars",
+          "description": "금칙어 체크(<,>,\",;)"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/Transaction/Securities/IssueOrgName",
+      "xml": "<IssueOrgName Code=\"\">",
+      "tag": "IssueOrgName",
+      "level": 5,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [
+        "Code"
+      ],
+      "desc_general": "발행은행명\n금융기관코드*",
+      "desc_casino": "발행은행명\n금융기관코드*",
+      "attr_constraints": "required",
+      "data_length": "-\n6",
+      "constraint1": null,
+      "constraint2": "지급은행과 발행은행 둘중 하나는 \n필수 기재해야함",
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/Transaction/Securities/IssueBranchOffice",
+      "xml": "<IssueBranchOffice>",
+      "tag": "IssueBranchOffice",
+      "level": 5,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "발행영업점명",
+      "desc_casino": "발행영업점명",
+      "attr_constraints": null,
+      "data_length": "50",
+      "constraint1": "금칙어 체크(<,>,\",;)",
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "forbidden_chars",
+          "description": "금칙어 체크(<,>,\",;)"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/Transaction/Securities/IssueAmount",
+      "xml": "<IssueAmount>",
+      "tag": "IssueAmount",
+      "level": 5,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "금액",
+      "desc_casino": "금액",
+      "attr_constraints": "required",
+      "data_length": "numeric(17,2)",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/Transaction/Securities/IssuerDate",
+      "xml": "<IssuerDate>",
+      "tag": "IssuerDate",
+      "level": 5,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "발행일",
+      "desc_casino": "발행일",
+      "attr_constraints": "required",
+      "data_length": "8",
+      "constraint1": "YYYYMMDD\n1900년 이후일자",
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "date_format",
+          "pattern": "YYYYMMDD"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/Transaction/Securities/IssuerDiv",
+      "xml": "<IssuerDiv Code=\"\">",
+      "tag": "IssuerDiv",
+      "level": 5,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [
+        "Code"
+      ],
+      "desc_general": "발행인/최종소지인 구분\n구분코드*",
+      "desc_casino": "발행인/최종소지인 구분\n구분코드*",
+      "attr_constraints": "required",
+      "data_length": "-\n1",
+      "constraint1": "코드 체크",
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "code_set_check",
+          "ref": "최종소지인구분코드",
+          "description": "코드 체크  발행인/최종소지인구분코드 참조"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/Transaction/Securities/RealNumber",
+      "xml": "<RealNumber Code=\"\">",
+      "tag": "RealNumber",
+      "level": 5,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [
+        "Code"
+      ],
+      "desc_general": "실명번호\n실명번호구분코드*",
+      "desc_casino": "실명번호\n실명번호구분코드*",
+      "attr_constraints": "required",
+      "data_length": "20\n2",
+      "constraint1": "코드 체크",
+      "constraint2": "1. 실명번호구분코드가 '01','02','03'일 경우 실명번호 Digit 체크\n2. 실명번호구분코드가 '08'인 경우 최대 20자리, 아닌 경우 최대 15자리까지 허용",
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "code_set_check",
+          "ref": "실명번호구분코드",
+          "description": "코드 체크 1. 실명번호구분코드가 '01','02','03'일 경우 실명번호 Digit 체크\n2. 실명번호구분코드가 '08'인 경우 최대 20자리, 아닌 경우 최대 15자리까지 허용 실명번호구분코드 참조\n"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/Transaction/Securities/CINumber",
+      "xml": "<CINumber>",
+      "tag": "CINumber",
+      "level": 5,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "CI 번호",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": "88",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": "실명번호구분코드가 '14'일 경우 필수"
+    },
+    {
+      "path": "/STR/Detail/Transaction/ForeignExchange",
+      "xml": "<ForeignExchange>",
+      "tag": "ForeignExchange",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "거래수단이 외환, 거래종류가 환전일 경우",
+      "desc_casino": "의심스러운 거래내역 반복거래 여부",
+      "attr_constraints": null,
+      "data_length": null,
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": "거래수단코드가  '05'(외환)이거나\n거래종류코드가 '03'(환전)일 경우 필수"
+    },
+    {
+      "path": "/STR/Detail/Transaction/ForeignExchange/Purpose",
+      "xml": "<Purpose Code=\"\">",
+      "tag": "Purpose",
+      "level": 5,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [
+        "Code"
+      ],
+      "desc_general": "거래목적명\n거래목적코드*",
+      "desc_casino": null,
+      "attr_constraints": "required",
+      "data_length": "60\n3",
+      "constraint1": "코드 체크",
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "code_set_check",
+          "ref": "외환거래목적코드",
+          "description": "코드 체크  외환거래목적코드 참조"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/Transaction/OtherBank",
+      "xml": "<OtherBank>",
+      "tag": "OtherBank",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": null
+      },
+      "attributes": [],
+      "desc_general": "타행계좌",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": null,
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/Transaction/OtherBank/AccountNumber",
+      "xml": "<AccountNumber>",
+      "tag": "AccountNumber",
+      "level": 5,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "송/수취계좌번호",
+      "desc_casino": null,
+      "attr_constraints": "required",
+      "data_length": "30",
+      "constraint1": null,
+      "constraint2": "지갑주소 입력시 \n대체계좌번호 입력",
+      "optional_required": "* 지갑주소 존재시 대체계좌번호 입력 \n(ex:보고문서번호17자리+일련번호5자리)"
+    },
+    {
+      "path": "/STR/Detail/Transaction/OtherBank/WaltAdr",
+      "xml": "<WaltAdr>",
+      "tag": "WaltAdr",
+      "level": 5,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "가상자산 지갑주소",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": "500",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": "트래블룰 : [당타송금/당타수취] & [100만원 이상] &[가상자산 입고/출고] 일때 지갑주소 필수 "
+    },
+    {
+      "path": "/STR/Detail/Transaction/OtherBank/AccountHolderType",
+      "xml": "<AccountHolderType Code=\"\">",
+      "tag": "AccountHolderType",
+      "level": 5,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [
+        "Code"
+      ],
+      "desc_general": "계좌주구분명\n계좌주구분코드*",
+      "desc_casino": null,
+      "attr_constraints": "required",
+      "data_length": "-\n2",
+      "constraint1": "코드 체크",
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "code_set_check",
+          "ref": "계좌주구분코드",
+          "description": "코드 체크  계좌주구분코드 참조"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/Transaction/OtherBank/Name",
+      "xml": "<Name>",
+      "tag": "Name",
+      "level": 5,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "계좌주명",
+      "desc_casino": null,
+      "attr_constraints": "required",
+      "data_length": "60",
+      "constraint1": null,
+      "constraint2": "지갑주소 입력시 \n지갑주소 소유주명 입력",
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/Transaction/OtherBank/Nationality",
+      "xml": "<Nationality code=\"\">",
+      "tag": "Nationality",
+      "level": 5,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [
+        "code"
+      ],
+      "desc_general": "상대국가명\n상대국가코드*",
+      "desc_casino": null,
+      "attr_constraints": "required",
+      "data_length": "-\n2",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/Transaction/OtherBank/OrgName",
+      "xml": "<OrgName Code=\"\">",
+      "tag": "OrgName",
+      "level": 5,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [
+        "Code"
+      ],
+      "desc_general": "상대금융기관명\n금융기관코드*",
+      "desc_casino": null,
+      "attr_constraints": "required",
+      "data_length": "-\n6",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/Transaction/OtherBank/BranchOffice",
+      "xml": "<BranchOffice ZipCode=\"\" Code=\"\">",
+      "tag": "BranchOffice",
+      "level": 5,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [
+        "ZipCode",
+        "Code"
+      ],
+      "desc_general": "상대영업점명\n우편번호*\n지점코드*",
+      "desc_casino": null,
+      "attr_constraints": "required",
+      "data_length": "50\n6\n7",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/Transaction/Stock",
+      "xml": "<Stock>",
+      "tag": "Stock",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": null
+      },
+      "attributes": [],
+      "desc_general": "증권",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": null,
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": "거래종류코드가 '10' ~ '15' (매수,매도,\n입고,출고,\n대체입고,대체출고)\n일 경우 필수"
+    },
+    {
+      "path": "/STR/Detail/Transaction/Stock/TransType",
+      "xml": "<TransType Code=\"\">",
+      "tag": "TransType",
+      "level": 5,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [
+        "Code"
+      ],
+      "desc_general": "거래종류명\n거래종류코드*",
+      "desc_casino": null,
+      "attr_constraints": "required",
+      "data_length": "-\n10",
+      "constraint1": "코드 체크",
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "code_set_check",
+          "ref": "거래종류코드",
+          "description": "코드 체크  거래종류코드 참조"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/Transaction/Stock/StockName",
+      "xml": "<StockName>",
+      "tag": "StockName",
+      "level": 5,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "매매종목명",
+      "desc_casino": null,
+      "attr_constraints": "required",
+      "data_length": "30",
+      "constraint1": "금칙어 체크(<,>,\",;)",
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "forbidden_chars",
+          "description": "금칙어 체크(<,>,\",;)"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/Transaction/Stock/Quantity",
+      "xml": "<Quantity>",
+      "tag": "Quantity",
+      "level": 5,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "매매수량",
+      "desc_casino": null,
+      "attr_constraints": "required",
+      "data_length": "11",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/Transaction/Stock/OrgName",
+      "xml": "<OrgName Code=\"\">",
+      "tag": "OrgName",
+      "level": 5,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [
+        "Code"
+      ],
+      "desc_general": "대상금융기관명\n금융기관코드*",
+      "desc_casino": null,
+      "attr_constraints": "required",
+      "data_length": "-\n6",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": "거래종류코드가 '14','15'(대체입고,대체출고)\n일 경우 필수"
+    },
+    {
+      "path": "/STR/Detail/Transaction/Stock/BranchOffice",
+      "xml": "<BranchOffice ZipCode=\"\" Code=\"\">",
+      "tag": "BranchOffice",
+      "level": 5,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [
+        "ZipCode",
+        "Code"
+      ],
+      "desc_general": "금융기관영업점명\n우편번호*\n지점코드*",
+      "desc_casino": null,
+      "attr_constraints": "required\nrequired",
+      "data_length": "50\n6\n7",
+      "constraint1": "영업점명 금칙어 체크\n(<,>,\",;)",
+      "constraint2": null,
+      "optional_required": "거래종류코드가 '14','15'(대체입고,대체출고)\n일 경우 필수",
+      "rules": [
+        {
+          "type": "forbidden_chars",
+          "description": "영업점명 금칙어 체크\n(<,>,\",;)"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/Transaction/Insurance",
+      "xml": "<Insurance>",
+      "tag": "Insurance",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "보험",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": null,
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": "거래상품코드가 \n'61'~'66'(보험)일 경우 필수"
+    },
+    {
+      "path": "/STR/Detail/Transaction/Insurance/Amount",
+      "xml": "<Amount>",
+      "tag": "Amount",
+      "level": 5,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "보험가입금액",
+      "desc_casino": null,
+      "attr_constraints": "required",
+      "data_length": "numeric(17,2)",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/Transaction/Insurance/IsHighAsset",
+      "xml": "<IsHighAsset>",
+      "tag": "IsHighAsset",
+      "level": 5,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "고가의 자산여부",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": "1",
+      "constraint1": " 'Y', 'N'",
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/Transaction/Insurance/ContractDate",
+      "xml": "<ContractDate>",
+      "tag": "ContractDate",
+      "level": 5,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "계약일",
+      "desc_casino": null,
+      "attr_constraints": "required",
+      "data_length": "8",
+      "constraint1": "YYYYMMDD\n1900년 이후일자",
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "date_format",
+          "pattern": "YYYYMMDD"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/Transaction/Insurance/MaturityDate",
+      "xml": "<MaturityDate>",
+      "tag": "MaturityDate",
+      "level": 5,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "만기일",
+      "desc_casino": null,
+      "attr_constraints": "required",
+      "data_length": "8",
+      "constraint1": "YYYYMMDD\n1900년 이후일자",
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "date_format",
+          "pattern": "YYYYMMDD"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/Transaction/Insurance/ChargeMethod",
+      "xml": "<ChargeMethod Code=\"\">",
+      "tag": "ChargeMethod",
+      "level": 5,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [
+        "Code"
+      ],
+      "desc_general": "보험료납입방법명\n보험료납입방법코드*",
+      "desc_casino": null,
+      "attr_constraints": "required",
+      "data_length": "30\n3",
+      "constraint1": "코드 체크",
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "code_set_check",
+          "ref": "보험료납입방법코드",
+          "description": "코드 체크  보험료납입방법코드 참조"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/User",
+      "xml": "<User>",
+      "tag": "User",
+      "level": 3,
+      "cardinality": {
+        "min": 1,
+        "max": null
+      },
+      "attributes": [],
+      "desc_general": "거래자 ",
+      "desc_casino": "거래자 ",
+      "attr_constraints": null,
+      "data_length": null,
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/User/RealNumber",
+      "xml": "<RealNumber Code=\"\">",
+      "tag": "RealNumber",
+      "level": 4,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [
+        "Code"
+      ],
+      "desc_general": "실명번호\n실명번호구분코드*",
+      "desc_casino": "실명번호\n실명번호구분코드*",
+      "attr_constraints": "required",
+      "data_length": "20\n2",
+      "constraint1": "코드 체크",
+      "constraint2": "1. 실명번호구분코드가 '01','02','03'일 경우 실명번호 Digit 체크\n2. 실명번호구분코드가 '08'인 경우 최대 20자리, 아닌 경우 최대 15자리까지 허용",
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "code_set_check",
+          "ref": null,
+          "description": "코드 체크 1. 실명번호구분코드가 '01','02','03'일 경우 실명번호 Digit 체크\n2. 실명번호구분코드가 '08'인 경우 최대 20자리, 아닌 경우 최대 15자리까지 허용 "
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/User/CINumber",
+      "xml": "<CINumber>",
+      "tag": "CINumber",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "CI 번호",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": "88",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": "실명번호구분코드가 '14'일 경우 필수"
+    },
+    {
+      "path": "/STR/Detail/User/RealNumberTypeName",
+      "xml": "<RealNumberTypeName>",
+      "tag": "RealNumberTypeName",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "거래자실명번호구분(기타기재)",
+      "desc_casino": "거래자실명번호구분(기타기재)",
+      "attr_constraints": null,
+      "data_length": "30",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/User/Name",
+      "xml": "<Name>",
+      "tag": "Name",
+      "level": 4,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "성명",
+      "desc_casino": "성명",
+      "attr_constraints": "required",
+      "data_length": "60",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/User/Nationality",
+      "xml": "<Nationality Code=\"\">",
+      "tag": "Nationality",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [
+        "Code"
+      ],
+      "desc_general": "국적\n국가코드*",
+      "desc_casino": "국적\n국가코드*",
+      "attr_constraints": "required",
+      "data_length": "-\n2",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": "<UserRelation>의 거래자역할이 '01','02','03','09','10','11','12','13','15','16','17','18'일 경우 필수"
+    },
+    {
+      "path": "/STR/Detail/User/Phone",
+      "xml": "<Phone HandPhone=\" \">",
+      "tag": "Phone",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [
+        "HandPhone"
+      ],
+      "desc_general": "거래자전화번호\n핸드폰번호*\n(법인/단체의 경우, \"사업체 전화번호-본점\"에 해당)",
+      "desc_casino": "거래자전화번호\n핸드폰번호*",
+      "attr_constraints": "optional",
+      "data_length": "25\n25",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/User/Address",
+      "xml": "<Address ZipCode=\"\">",
+      "tag": "Address",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [
+        "ZipCode"
+      ],
+      "desc_general": "주소(자택)\n우편번호*\n(법인/단체의 경우, \"사업체 우편번호/주소-본점\"에 해당)",
+      "desc_casino": "주소(자택)\n우편번호*",
+      "attr_constraints": "required",
+      "data_length": "200\n6",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": "1. <UserRelation>의 거래자역할이 '01','08', '11'일 경우\n자택 또는 직장주소 중 최소 1가지 기재"
+    },
+    {
+      "path": "/STR/Detail/User/AddressCompany",
+      "xml": "<AddressCompany ZipCode=\"\">",
+      "tag": "AddressCompany",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [
+        "ZipCode"
+      ],
+      "desc_general": "주소(직장)\n우편번호*",
+      "desc_casino": "주소(직장)\n우편번호*",
+      "attr_constraints": "required",
+      "data_length": "200\n6",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/User/BirthDay",
+      "xml": "<BirthDay>",
+      "tag": "BirthDay",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "거래자 생년월일/사업체 설립일",
+      "desc_casino": "거래자 생년월일",
+      "attr_constraints": null,
+      "data_length": "8",
+      "constraint1": "YYYYMMDD",
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "date_format",
+          "pattern": "YYYYMMDD"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/User/Gender",
+      "xml": "<Gender Code = \" \">",
+      "tag": "Gender",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "성별\n성별코드*",
+      "desc_casino": "성별\n성별코드*",
+      "attr_constraints": "required",
+      "data_length": "-\n1",
+      "constraint1": "코드 체크",
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "code_set_check",
+          "ref": null,
+          "description": "코드 체크  Code(성별코드) - 남 :1   여:2"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/User/Company",
+      "xml": "<Company>",
+      "tag": "Company",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "직장명",
+      "desc_casino": "직장명",
+      "attr_constraints": null,
+      "data_length": 60,
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/User/DeptName",
+      "xml": "<DeptName>",
+      "tag": "DeptName",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "부서명",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": 60,
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/User/Position",
+      "xml": "<Position>",
+      "tag": "Position",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "직위",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": 60,
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/User/CeoName",
+      "xml": "<CeoName>",
+      "tag": "CeoName",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "대표자명",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": 60,
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/User/OccupationType",
+      "xml": "<OccupationType Code=\"\">",
+      "tag": "OccupationType",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [
+        "Code"
+      ],
+      "desc_general": "직업구분\n직업구분코드*",
+      "desc_casino": null,
+      "attr_constraints": "required",
+      "data_length": "-\n2",
+      "constraint1": "코드 체크",
+      "constraint2": null,
+      "optional_required": "<UserRelation>의 \n거래자역할이 '01'이고 \n실명번호구분코드가 \n'01','04','06','07'일 경우  필수",
+      "rules": [
+        {
+          "type": "code_set_check",
+          "ref": "직업구분코드",
+          "description": "코드 체크  직업구분코드 참조"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/User/BizNo",
+      "xml": "<BizNo>",
+      "tag": "BizNo",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "거래자직업내용-사업자등록번호",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": 15,
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/User/IsHighAsset",
+      "xml": "<IsHighAsset>",
+      "tag": "IsHighAsset",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "고액자산가여부",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": 1,
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/User/KSIC",
+      "xml": "<KSIC Code=\"\"></KSIC>",
+      "tag": "KSIC",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [
+        "Code"
+      ],
+      "desc_general": "업종코드명\n업종코드*",
+      "desc_casino": null,
+      "attr_constraints": "required",
+      "data_length": 5,
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/User/BizAddress",
+      "xml": "<BizAddress  ZipCode=\"\">",
+      "tag": "BizAddress",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [
+        "ZipCode"
+      ],
+      "desc_general": "사업체 사업장 우편번호/주소\n우편번호*\n(법인/단체의 경우)",
+      "desc_casino": null,
+      "attr_constraints": "required",
+      "data_length": "200\n6",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/User/BizTelNo",
+      "xml": "<BizTelNo >",
+      "tag": "BizTelNo",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "사업체 사업장 전화번호\n(법인/단체의 경우)",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": 25,
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/User/HomepageURL",
+      "xml": "<HomepageURL>",
+      "tag": "HomepageURL",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "홈페이지 주소\n(법인/단체의 경우)",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": 200,
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/User/BizScale",
+      "xml": "<BizScale Code=\"\">",
+      "tag": "BizScale",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [
+        "Code"
+      ],
+      "desc_general": "기업규모\n기업규모코드*\n(법인/단체의 경우-법인구분)",
+      "desc_casino": null,
+      "attr_constraints": "required",
+      "data_length": "-\n2",
+      "constraint1": "코드 체크",
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "code_set_check",
+          "ref": "기업규모코드",
+          "description": "코드 체크  기업규모코드 참조"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/User/IsBankingOrgan",
+      "xml": "<IsBankingOrgan>",
+      "tag": "IsBankingOrgan",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "금융기관 여부\n(법인/단체의 경우-법인구분)",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": 1,
+      "constraint1": " 'Y', 'N'",
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/User/IsNonProfitCorp",
+      "xml": "<IsNonProfitCorp>",
+      "tag": "IsNonProfitCorp",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "비영리법인 여부\n(법인/단체의 경우-법인구분)",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": 1,
+      "constraint1": " 'Y', 'N'",
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/User/IsNationalPublicGroup",
+      "xml": "<IsNationalPublicGroup>",
+      "tag": "IsNationalPublicGroup",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "국가공공단체 여부\n(법인/단체의 경우-법인구분)",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": 1,
+      "constraint1": " 'Y', 'N'",
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/User/IsStockList",
+      "xml": "<IsStockList>",
+      "tag": "IsStockList",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "상장여부\n(법인/단체의 경우-법인구분)",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": 1,
+      "constraint1": " 'Y', 'N'",
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/User/StockListInfo",
+      "xml": "<StockListInfo>",
+      "tag": "StockListInfo",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "상장정보\n(법인/단체의 경우-상장정보)",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": null,
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/User/StockListInfo/StockListType",
+      "xml": "<StockListType Code=\"\">",
+      "tag": "StockListType",
+      "level": 5,
+      "cardinality": {
+        "min": 1,
+        "max": null
+      },
+      "attributes": [
+        "Code"
+      ],
+      "desc_general": "거래소\n거래소코드*",
+      "desc_casino": null,
+      "attr_constraints": "required",
+      "data_length": "30\n2",
+      "constraint1": "코드 체크",
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "code_set_check",
+          "ref": "상장구분코드",
+          "description": "코드 체크  상장구분코드 참조"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/Account",
+      "xml": "<Account>",
+      "tag": "Account",
+      "level": 3,
+      "cardinality": {
+        "min": 0,
+        "max": null
+      },
+      "attributes": [],
+      "desc_general": "계좌 ",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": null,
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/Account/OrgName",
+      "xml": "<OrgName Code=\"\">",
+      "tag": "OrgName",
+      "level": 4,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [
+        "Code"
+      ],
+      "desc_general": "금융기관명\n금융기관코드*",
+      "desc_casino": null,
+      "attr_constraints": "required",
+      "data_length": "-\n6",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/Account/BranchOffce",
+      "xml": "<BranchOffce ZipCode=\"\" Code=\"\">",
+      "tag": "BranchOffce",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [
+        "ZipCode",
+        "Code"
+      ],
+      "desc_general": "지점명\n우편번호*\n지점코드*",
+      "desc_casino": null,
+      "attr_constraints": "required",
+      "data_length": "30\n6\n7",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": "자행인 경우 필수"
+    },
+    {
+      "path": "/STR/Detail/Account/AccountNumber",
+      "xml": "<AccountNumber>",
+      "tag": "AccountNumber",
+      "level": 4,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "계좌번호",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": "30",
+      "constraint1": null,
+      "constraint2": "지갑주소 입력시 \n대체계좌번호 입력",
+      "optional_required": "* 가상자산 매도매수시 계좌번호 필수 \n* 지갑주소 존재시 대체계좌번호 입력 \n(ex:보고문서번호17자리+일련번호5자리)"
+    },
+    {
+      "path": "/STR/Detail/Account/WaltAdr",
+      "xml": "<WaltAdr>",
+      "tag": "WaltAdr",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "가상자산 지갑주소",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": "500",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": "트래블룰 : 2022.03.25 이후 거래일에 대해 [당타송금/당타수취] & [100만원 이상] &[가상자산 입고/출고] 일때 지갑주소 필수 "
+    },
+    {
+      "path": "/STR/Detail/Account/RegDate",
+      "xml": "<RegDate>",
+      "tag": "RegDate",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "계좌개설일",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": "8",
+      "constraint1": "1. YYYYMMDD\n2. 1900년 이후일자",
+      "constraint2": null,
+      "optional_required": "자행인 경우 필수",
+      "rules": [
+        {
+          "type": "date_format",
+          "pattern": "YYYYMMDD"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/Account/AccountUser",
+      "xml": "<AccountUser Code=\" \">",
+      "tag": "AccountUser",
+      "level": 4,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [
+        "Code"
+      ],
+      "desc_general": "계좌주실명번호\n실명번호구분코드*",
+      "desc_casino": null,
+      "attr_constraints": "required",
+      "data_length": "20\n2",
+      "constraint1": "코드 체크",
+      "constraint2": "1. 실명번호구분코드가 '01','02','03'일 경우 실명번호 Digit 체크\n2. 실명번호구분코드가 '08'인 경우 최대 20자리, 아닌 경우 최대 15자리까지 허용",
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "code_set_check",
+          "ref": null,
+          "description": "코드 체크 1. 실명번호구분코드가 '01','02','03'일 경우 실명번호 Digit 체크\n2. 실명번호구분코드가 '08'인 경우 최대 20자리, 아닌 경우 최대 15자리까지 허용 "
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/Account/AccountUserCINumber",
+      "xml": "<AccountUserCINumber>",
+      "tag": "AccountUserCINumber",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "계좌주 CI 번호",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": "88",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": "계좌주 실명번호구분코드가 '14'일 경우 필수"
+    },
+    {
+      "path": "/STR/Detail/Account/AgentFlag",
+      "xml": "<AgentFlag>",
+      "tag": "AgentFlag",
+      "level": 4,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "대리인존재여부",
+      "desc_casino": null,
+      "attr_constraints": "required",
+      "data_length": "1",
+      "constraint1": " 'Y', 'N'",
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/Account/AgentUser",
+      "xml": "<AgentUser Code=\"  \">",
+      "tag": "AgentUser",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [
+        "Code"
+      ],
+      "desc_general": "대리인실명번호\n실명번호구분코드*",
+      "desc_casino": null,
+      "attr_constraints": "required",
+      "data_length": "20\n2",
+      "constraint1": "코드 체크",
+      "constraint2": "1. 실명번호구분코드가 '01','02','03'일 경우 실명번호 Digit 체크\n2. 실명번호구분코드가 '08'인 경우 최대 20자리, 아닌 경우 최대 15자리까지 허용",
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "code_set_check",
+          "ref": null,
+          "description": "코드 체크 1. 실명번호구분코드가 '01','02','03'일 경우 실명번호 Digit 체크\n2. 실명번호구분코드가 '08'인 경우 최대 20자리, 아닌 경우 최대 15자리까지 허용 "
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/Account/AgentUserCINumber",
+      "xml": "<AgentUserCINumber>",
+      "tag": "AgentUserCINumber",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "대리인 CI 번호",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": "88",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": "대리인 실명번호구분코드가 '14'일 경우 필수"
+    },
+    {
+      "path": "/STR/Detail/Account/AccountOpenPurpose",
+      "xml": "<AccountOpenPurpose Code=\" \">",
+      "tag": "AccountOpenPurpose",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [
+        "Code"
+      ],
+      "desc_general": "계좌개설목적\n계좌개설목적코드*",
+      "desc_casino": null,
+      "attr_constraints": "required",
+      "data_length": "100\n2",
+      "constraint1": "코드 체크",
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "code_set_check",
+          "ref": null,
+          "description": "코드 체크  "
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/InterUserRelation",
+      "xml": "<InterUserRelation>",
+      "tag": "InterUserRelation",
+      "level": 3,
+      "cardinality": {
+        "min": 0,
+        "max": null
+      },
+      "attributes": [],
+      "desc_general": "User간의관계\n(대표자,대리인 관계)",
+      "desc_casino": "User간의관계\n(대리인 관계)",
+      "attr_constraints": null,
+      "data_length": null,
+      "constraint1": null,
+      "constraint2": "대표자,대리인의 관계가 존재할 경우 반드시 생성해야 함",
+      "optional_required": null
+    },
+    {
+      "path": "/STR/Detail/InterUserRelation/Relation",
+      "xml": "<Relation Code=\"\">",
+      "tag": "Relation",
+      "level": 4,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [
+        "Code"
+      ],
+      "desc_general": "User관계\n거래자관계코드*",
+      "desc_casino": "User관계\n거래자관계코드*",
+      "attr_constraints": "required",
+      "data_length": "-\n10",
+      "constraint1": "코드 체크",
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "code_set_check",
+          "ref": "거래자관계코드",
+          "description": "코드 체크  거래자관계코드 참조('51', '52')"
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/InterUserRelation/PrincipalUser",
+      "xml": "<PrincipalUser Code=\" \">",
+      "tag": "PrincipalUser",
+      "level": 4,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [
+        "Code"
+      ],
+      "desc_general": "거래자, 계좌주, 송/수취계좌주,법인/단체\n실명번호구분코드*",
+      "desc_casino": "거래자\n실명번호구분코드*",
+      "attr_constraints": "required",
+      "data_length": "20\n2",
+      "constraint1": "코드 체크",
+      "constraint2": "1. 실명번호구분코드가 '01','02','03'일 경우 실명번호 Digit 체크\n2. 실명번호구분코드가 '08'인 경우 최대 20자리, 아닌 경우 최대 15자리까지 허용",
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "code_set_check",
+          "ref": null,
+          "description": "코드 체크 1. 실명번호구분코드가 '01','02','03'일 경우 실명번호 Digit 체크\n2. 실명번호구분코드가 '08'인 경우 최대 20자리, 아닌 경우 최대 15자리까지 허용 "
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/InterUserRelation/PrincipalUserCINumber",
+      "xml": "<PrincipalUserCINumber>",
+      "tag": "PrincipalUserCINumber",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "거래자, 계좌주, 송/수취계좌주,법인/단체 CI 번호",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": "88",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": "실명번호구분코드가 '14'일 경우 필수"
+    },
+    {
+      "path": "/STR/Detail/InterUserRelation/ParticipantUser",
+      "xml": "<ParticipantUser Code=\" \">",
+      "tag": "ParticipantUser",
+      "level": 4,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [
+        "Code"
+      ],
+      "desc_general": "관계인\n실명번호구분코드*",
+      "desc_casino": "관계인\n실명번호구분코드*",
+      "attr_constraints": "required",
+      "data_length": "20\n2",
+      "constraint1": "코드 체크",
+      "constraint2": "1. 실명번호구분코드가 '01','02','03'일 경우 실명번호 Digit 체크\n2. 실명번호구분코드가 '08'인 경우 최대 20자리, 아닌 경우 최대 15자리까지 허용",
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "code_set_check",
+          "ref": null,
+          "description": "코드 체크 1. 실명번호구분코드가 '01','02','03'일 경우 실명번호 Digit 체크\n2. 실명번호구분코드가 '08'인 경우 최대 20자리, 아닌 경우 최대 15자리까지 허용 "
+        }
+      ]
+    },
+    {
+      "path": "/STR/Detail/InterUserRelation/ParticipantUserCINumber",
+      "xml": "<ParticipantUserCINumber>",
+      "tag": "ParticipantUserCINumber",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "관계인 CI 번호",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": "88",
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": "실명번호구분코드가 '14'일 경우 필수"
+    },
+    {
+      "path": "/STR/Detail/InterUserRelation/Remark",
+      "xml": "<Remark>",
+      "tag": "Remark",
+      "level": 4,
+      "cardinality": {
+        "min": 0,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "관계명",
+      "desc_casino": "관계명",
+      "attr_constraints": null,
+      "data_length": "100",
+      "constraint1": " 금칙어 체크(<,>,\",;)",
+      "constraint2": null,
+      "optional_required": "거래자관계코드가 \n'52'대리인일 경우 필수",
+      "rules": [
+        {
+          "type": "forbidden_chars",
+          "description": " 금칙어 체크(<,>,\",;)"
+        }
+      ]
+    },
+    {
+      "path": "/STR/FileAttach",
+      "xml": "<FileAttach>",
+      "tag": "FileAttach",
+      "level": 2,
+      "cardinality": {
+        "min": 0,
+        "max": null
+      },
+      "attributes": [],
+      "desc_general": "첨부파일",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": null,
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    },
+    {
+      "path": "/STR/FileAttach/FileName",
+      "xml": "<FileName Code=\"\">",
+      "tag": "FileName",
+      "level": 3,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [
+        "Code"
+      ],
+      "desc_general": "첨부파일명\n정형화된 파일여부*",
+      "desc_casino": null,
+      "attr_constraints": "required",
+      "data_length": null,
+      "constraint1": "파일명 금칙어 체크(<,>,\",;)\n Code = 'Y' or 'N'",
+      "constraint2": null,
+      "optional_required": null,
+      "rules": [
+        {
+          "type": "forbidden_chars",
+          "description": "파일명 금칙어 체크(<,>,\",;)\n Code = 'Y' or 'N'"
+        }
+      ]
+    },
+    {
+      "path": "/STR/FileAttach/Body",
+      "xml": "<Body>",
+      "tag": "Body",
+      "level": 3,
+      "cardinality": {
+        "min": 1,
+        "max": 1
+      },
+      "attributes": [],
+      "desc_general": "첨부파일(base64인코딩)",
+      "desc_casino": null,
+      "attr_constraints": null,
+      "data_length": null,
+      "constraint1": null,
+      "constraint2": null,
+      "optional_required": null
+    }
+  ]
+}

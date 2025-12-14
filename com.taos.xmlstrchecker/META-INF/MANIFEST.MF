@@ -16,3 +16,5 @@ Require-Bundle: javax.inject,
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Import-Package: javax.annotation;version="1.2.0"
 Automatic-Module-Name: com.taos.xmlstrchecker
+Bundle-ClassPath: .,
+ lib/json-20220320.jar

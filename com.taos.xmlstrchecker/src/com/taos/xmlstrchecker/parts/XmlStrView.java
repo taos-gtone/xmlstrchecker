@@ -1,46 +1,22 @@
 package com.taos.xmlstrchecker.parts;
 
-import java.io.File;
-import java.util.HashSet;
-import java.util.Set;
-
 import javax.annotation.PostConstruct;
-import javax.inject.Inject;
-import javax.inject.Named;
-import org.eclipse.e4.core.di.annotations.Optional;
-import org.eclipse.e4.ui.di.Focus;
-import org.eclipse.e4.ui.services.IServiceConstants;
-import org.eclipse.jface.viewers.ISelection;
-import org.eclipse.jface.viewers.IStructuredSelection;
+
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Label;
-
-import org.eclipse.ui.part.ViewPart;
-import org.eclipse.swt.widgets.Combo;
-import org.eclipse.swt.widgets.Text;
-import org.eclipse.swt.widgets.Table;
-
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
+import org.eclipse.swt.widgets.Combo;
+import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.FileDialog;
-
+import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
-import org.eclipse.swt.widgets.TableItem;
-
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.NodeList;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-
-import java.io.IOException;
-import org.xml.sax.SAXException;
+import org.eclipse.ui.part.ViewPart;
 
 import com.taos.xmlstrchecker.core.CheckResult;
 import com.taos.xmlstrchecker.core.DependencyChecker;
+import com.taos.xmlstrchecker.core.StrRuleValidatorService;
 import com.taos.xmlstrchecker.core.XmlCheckerService;
 import com.taos.xmlstrchecker.core.XmlParser;
 import com.taos.xmlstrchecker.ui.ErrorTablePresenter;
@@ -88,7 +64,7 @@ public class XmlStrView extends ViewPart {
         statusPresenter = new StatusPresenter(lblStatus);
         errorPresenter = new ErrorTablePresenter(errorTable);
 
-        checker = new XmlCheckerService(new XmlParser(), new DependencyChecker());
+        checker = new XmlCheckerService(new XmlParser(), new DependencyChecker(), new StrRuleValidatorService());
 
         // initial status
         statusPresenter.show(CheckResult.StatusKind.READY, "Ready.");
